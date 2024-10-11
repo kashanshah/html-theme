@@ -25,6 +25,7 @@ function clean() {
 function styles() {
   return gulp.src([
     './node_modules/bootstrap/dist/css/bootstrap.css',
+    './node_modules/swiper/swiper-bundle.css',
     'src/assets/styles/**/*.scss'
   ])
     .pipe(mapSources.init())
@@ -43,6 +44,7 @@ function scripts() {
   return src([
     './node_modules/jquery/dist/jquery.js',
     './node_modules/bootstrap/dist/js/bootstrap.bundle.js',
+    './node_modules/swiper/swiper-bundle.js',
     // './node_modules/slick-carousel/slick/slick.js',
     // './node_modules/jquery-inview/jquery.inview.js',
     // './node_modules/gsap/dist/all.js',

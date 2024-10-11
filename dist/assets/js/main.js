@@ -5,6 +5,7 @@ console.log(
 
 $(document).ready(function () {
   colorTheme();
+  heroSlider();
 });
 
 // Color theme switcher
@@ -31,33 +32,26 @@ const updateTheme = (theme) => {
   }
 };
 
-updateTheme(getSystemTheme());
-
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-  const storedTheme = getCurrentTheme();
-  if (storedTheme !== 'light' && storedTheme !== 'dark') {
-    updateTheme(getSystemTheme());
-  }
-});
-
-document.getElementById('primary-color').addEventListener('change', function (event) {
-  let primaryColor = event.target.value;
-  document.body.setAttribute('data-bs-theme', primaryColor);
-  updateTheme(primaryColor);
-});
-
-// Load saved colors on page load
-window.onload = function () {
-  let savedTheme = getCurrentTheme();
-
-  if (savedTheme) {
-    document.getElementById('primary-color').value = savedTheme;
-  }
-};
-
 function colorTheme() {
-  document.getElementById('primary-color').addEventListener('input', function (event) {
-    let primaryColor = event.target.value;
-    localStorage.setItem('primaryColor', primaryColor);
+  updateTheme(getSystemTheme());
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+    const storedTheme = getCurrentTheme();
+    if (storedTheme !== 'light' && storedTheme !== 'dark') {
+      updateTheme(getSystemTheme());
+    }
+  });
+}
+var swiper;
+function heroSlider() {
+  swiper = new Swiper('.hero-slider', {
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'fraction',
+      formatFractionCurrent: (number) => `0${number}`.slice(-2),
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
   });
 }

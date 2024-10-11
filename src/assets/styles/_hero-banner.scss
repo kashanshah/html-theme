@@ -1,0 +1,90 @@
+.hero-slider {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.hero-banner {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  padding: rem(120) 0;
+  width: 100%;
+  .hero-banner-img {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .hero-banner-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    flex: 0 0 100%;
+    h1 {
+      font-size: rem(80);
+    }
+  }
+  .btn-primary,
+  .btn-secondary {
+    &:focus-visible {
+      @include outline(var(--bs-white));
+    }
+  }
+}
+.hero-slider-navigation {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  bottom: rem(30);
+  width: auto;
+  height: auto;
+  --swiper-navigation-color: var(--bs-white);
+  gap: rem(44);
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: static;
+    font-size: rem(22);
+    display: flex;
+    gap: rem(6);
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    margin: 0;
+    &:after {
+      display: none;
+    }
+  }
+  .swiper-button-next {
+    display: flex;
+    color: var(--bs-white);
+    flex-direction: row-reverse;
+  }
+  .hero-slider-pagination {
+    font-size: 0;
+    position: static;
+    .swiper-pagination-current {
+      font-size: rem(50);
+      line-height: .5;
+    }
+  }
+
+  .icon {
+    color: inherit;
+    width: rem(27);
+  }
+}
+
+

@@ -1,3 +1,13 @@
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px,
+  xl: 1400px,
+  xxl: 1800px
+) !default;
+
 @mixin transitions($speed: 0.5s, $property: all, $timing: ease-in-out) {
   -webkit-transition: $property $speed $timing;
   -moz-transition: $property $speed $timing;
@@ -43,9 +53,35 @@
   text-shadow: $value;
 }
 
-
 @mixin grayscale($value) {
   filter: grayscale($value);
   -webkit-filter: grayscale($value);
   -moz-filter: grayscale($value);
+}
+
+@mixin outline($color: var(--bs-primary), $size: 1px) {
+  box-shadow: none;
+  outline: $size solid $color;
+}
+
+@mixin visually-hidden() {
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important; // Fix for https://github.com/twbs/bootstrap/issues/25686
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+
+  // Fix for positioned table caption that could become anonymous cells
+  &:not(caption) {
+    position: absolute !important;
+  }
+}
+
+@mixin visually-hidden-focusable() {
+  &:not(:focus):not(:focus-within) {
+    @include visually-hidden();
+  }
 }
