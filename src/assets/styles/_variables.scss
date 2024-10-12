@@ -66,7 +66,7 @@
   --bs-dark-border-subtle: #adb5bd;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-font-sans-serif: 'Noto Sans', sans-serif; // done
+  --bs-font-sans-serif: "Montserrat", sans-serif; // done
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(var(--bs-primary-rgb), 1), rgba(var(--bs-secondary-rgb), 1));
   --bs-body-font-family: var(--bs-font-sans-serif);
@@ -177,7 +177,7 @@
   --tk-btn-border-radius: 50px; // done
   --tk-btn-padding-x: 2rem; // done
   --tk-btn-padding-y: .75rem; // done
-  --bs-font-sans-serif: 'Noto Sans', sans-serif; // done
+  --bs-font-sans-serif: "Montserrat", sans-serif; // done
 }
 
 .btn {

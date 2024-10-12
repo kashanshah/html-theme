@@ -1,8 +1,11 @@
 .hero-slider {
   position: relative;
+  overflow: hidden;
   width: 100%;
   min-height: 100vh;
-  overflow: hidden;
+  @include media-breakpoint-down(lg) {
+    min-height: 70vh;
+  }
 }
 .hero-banner {
   position: relative;
@@ -10,9 +13,15 @@
   height: auto;
   overflow: hidden;
   display: flex;
+  align-items: center;
   padding: rem(120) 0;
   width: 100%;
   background: var(--bs-body-bg);
+  @include media-breakpoint-down(lg) {
+    min-height: 60vh;
+    padding: rem(100) 0 rem(150);
+    display: block;
+  }
   .hero-banner-img {
     position: absolute;
     z-index: 0;
@@ -45,11 +54,12 @@
   .hero-banner-content {
     position: relative;
     z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: auto;
     flex: 0 0 100%;
+    @include media-breakpoint-down(lg) {
+      display: block;
+      text-align: center;
+    }
     small {
       font-size: rem(24);
       display: block;
@@ -120,6 +130,10 @@
   width: 100%;
   height: auto;
   --swiper-navigation-color: var(--bs-white);
+  @include media-breakpoint-down(lg) {
+    position: static;
+    padding: rem(8) 0;
+  }
   .hero-slider-buttons {
     display: flex;
     gap: rem(40);
@@ -128,14 +142,18 @@
     justify-content: flex-start;
     @include media-breakpoint-down(lg) {
       gap: rem(20);
+      justify-content: center;
     }
     .hero-slider-prev-next {
       display: flex;
       gap: rem(24);
       align-items: center;
       width: 100%;
+      justify-content: flex-start;
       @include media-breakpoint-down(lg) {
         gap: rem(12);
+        justify-content: center;
+        width: auto;
       }
       .hero-slider-button-prev,
       .hero-slider-button-next {

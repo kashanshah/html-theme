@@ -30,7 +30,8 @@ const updateTheme = theme => {
 }
 
 function colorTheme(){
-  updateTheme(getSystemTheme())
+  // updateTheme(getSystemTheme())
+  updateTheme('dark')
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
     const storedTheme = getCurrentTheme()
     if (storedTheme !== 'light' && storedTheme !== 'dark') {
