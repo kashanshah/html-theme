@@ -106,26 +106,44 @@ body {
 
 h1, .h1 {
   font-size: rem(60);
+  @include media-breakpoint-down(lg) {
+    font-size: rem(50);
+  }
 }
 
 h2, .h2 {
   font-size: rem(50);
+  @include media-breakpoint-down(lg) {
+    font-size: rem(40);
+  }
 }
 
 h3, .h3 {
   font-size: rem(40);
+  @include media-breakpoint-down(lg) {
+    font-size: rem(30);
+  }
 }
 
 h4, .h4 {
   font-size: rem(30);
+  @include media-breakpoint-down(lg) {
+    font-size: rem(24);
+  }
 }
 
 h5, .h5 {
   font-size: rem(24);
+  @include media-breakpoint-down(lg) {
+    font-size: rem(20);
+  }
 }
 
 h6, .h6 {
   font-size: rem(20);
+  @include media-breakpoint-down(lg) {
+    font-size: rem(18);
+  }
 }
 
 .skip-link {
@@ -136,5 +154,11 @@ h6, .h6 {
   position: relative;
   z-index: 101;
   @include visually-hidden-focusable();
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, var(--bs-primary) 0%, var(--bs-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 

@@ -45,6 +45,7 @@ function scripts() {
     './node_modules/jquery/dist/jquery.js',
     './node_modules/bootstrap/dist/js/bootstrap.bundle.js',
     './node_modules/swiper/swiper-bundle.js',
+    './node_modules/particles.js/particles.js',
     // './node_modules/slick-carousel/slick/slick.js',
     // './node_modules/jquery-inview/jquery.inview.js',
     // './node_modules/gsap/dist/all.js',
@@ -73,7 +74,7 @@ function imgMinify() {
 
 // Include HTML partials and copy to 'dist'
 function publishHTML() {
-  return src(['./src/**/*.html', './src/**/*.txt'])
+  return src(['./src/**/*.html', './src/**/*.txt', './src/**/*.json'])
     .pipe(fileinclude({ prefix: '@@', basepath: '@file' }))
     .pipe(dest('dist/'));
 }
@@ -85,7 +86,7 @@ function publishFonts() {
 
 // Watch for changes and re-run tasks
 function watching() {
-  watch(['./src/*.html', './src/**/*.html'], series(publishHTML));
+  watch(['./src/*.html', './src/**/*.html', './src/**/*.json'], series(publishHTML));
   watch('./src/assets/styles/{,/**/*}*.{scss,sass}', series(styles));
   watch('./src/assets/js/**/*.js', series(scripts));
   watch('./src/assets/images/{,/**/*}*.{png,svg,jpg,jpeg,webp}', series(imgMinify));

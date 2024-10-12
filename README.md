@@ -103,6 +103,11 @@ The Hero Banner component can be customized using the following `data-` attribut
   - `cards`: Cards effect.
   - `creative-1` to `creative-6`: Various creative effects with different animations.
 
+- `data-autoplay`: Enables or disables autoplay. Possible values:
+  - `true`: Enables autoplay.
+  - `false`: Disables autoplay.
+  - `2000`: Autoplay with an intervals of 2000ms.
+
 - `data-grab-cursor`: Enables or disables the grab cursor. Possible values:
   - `true`: Enables the grab cursor.
   - `false`: Disables the grab cursor.
@@ -110,3 +115,9 @@ The Hero Banner component can be customized using the following `data-` attribut
 - `data-loop`: Enables or disables looping of the slides. Possible values:
   - `true`: Enables looping.
   - `false`: Disables looping.
+
+- `data-has-particles`: Specifies if the hero banner has particles. Possible values:
+  - `true`: Enables particles.
+  - `false`: Disables particles.
+
+`hero-banner` has class 'has-overlay' if you want to add overlay on the image.

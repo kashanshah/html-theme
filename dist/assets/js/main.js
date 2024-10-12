@@ -45,6 +45,15 @@ var swiper;
 function heroSlider() {
   $('.hero-slider').each(function (el, index) {
     const $this = $(this);
+    if ($this.attr('data-has-particles') === 'true') {
+      $this.find('.hero-banner').each(function () {
+        const customId = makeId();
+        $(this).append('<div class="particles-js" id="particles-js' + customId + '"></div>');
+        particlesJS.load('particles-js' + customId, './assets/js/particlesjs-config.json', function () {
+          // console.log('callback - particles.js config loaded');
+        });
+      });
+    }
     const creativeEffects = [
       {
         prev: {
@@ -135,9 +144,19 @@ function heroSlider() {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-      grabCursor: $this.attr('data-grab-cursor') === 'true',
+      grabCursor: $this.attr('data-grab-cursor').toString() === 'true',
       loop: $this.attr('data-loop') === 'true',
+      autoplay:
+        (!!$this.attr('data-autoplay') && $this.attr('data-autoplay')) !== 'false'
+          ? {
+              delay: Number($this.attr('data-autoplay')) || 5000,
+            }
+          : false,
       ...getEffect($this.attr('data-effect')),
     });
   });
+}
+
+function makeId() {
+  return '_' + Math.random().toString(36).substr(2, 9);
 }
