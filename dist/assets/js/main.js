@@ -8,40 +8,73 @@ $(document).ready(function () {
   heroSlider();
 });
 
-// Color theme switcher
-const getCurrentTheme = () => localStorage.getItem('teknoffice-theme');
-const updateCurrentTheme = (theme) => localStorage.setItem('teknoffice-theme', theme);
-
-const getSystemTheme = () => {
-  const storedTheme = getCurrentTheme();
-  if (storedTheme) {
-    return storedTheme;
-  }
-
-  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-};
-
-const updateTheme = (theme) => {
-  if (theme === 'auto') {
-    const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    document.documentElement.setAttribute('data-bs-theme', preferredTheme);
-    updateCurrentTheme(theme);
-  } else {
-    document.documentElement.setAttribute('data-bs-theme', theme);
-    updateCurrentTheme(theme);
-  }
-};
-
 function colorTheme() {
-  // updateTheme(getSystemTheme())
-  updateTheme('dark');
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-    const storedTheme = getCurrentTheme();
-    if (storedTheme !== 'light' && storedTheme !== 'dark') {
-      updateTheme(getSystemTheme());
+  const isDark = () => document.documentElement.getAttribute('data-bs-theme') === 'dark';
+  const toggleDarkMode = () => {
+    if (document.documentElement.getAttribute('data-bs-theme') === 'dark') {
+      document.documentElement.setAttribute('data-bs-theme', 'light');
+      // extra
+      document.getElementById('moon').classList.add('activeThemeIcon');
+      document.getElementById('sun').classList.remove('activeThemeIcon');
+      return;
     }
-  });
+
+    document.documentElement.setAttribute('data-bs-theme', 'dark');
+    // extra
+    document.getElementById('sun').classList.add('activeThemeIcon');
+    document.getElementById('moon').classList.remove('activeThemeIcon');
+  };
+
+  const isAppearanceTransition =
+    document.startViewTransition && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const themeToggleClickHandler = (evt) => {
+    if (!isAppearanceTransition || !evt) {
+      toggleDarkMode();
+      return;
+    }
+
+    const centerX =
+      event.currentTarget.getBoundingClientRect().left + event.currentTarget.getBoundingClientRect().width / 2;
+    const centerY =
+      event.currentTarget.getBoundingClientRect().top + event.currentTarget.getBoundingClientRect().height / 2;
+
+    // Get the mouse click position, pos 0 when keyboard click
+    const x = event.clientX || centerX;
+    const y = event.clientY || centerY;
+
+    const endRadius = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+
+    const transition = document.startViewTransition(() => toggleDarkMode());
+    transition.ready.then(() => {
+      const clipPath = [`circle(0px at ${x}px ${y}px)`, `circle(${endRadius}px at ${x}px ${y}px)`];
+
+      document.documentElement.animate(
+        {
+          clipPath: isDark() ? [...clipPath].reverse() : clipPath,
+        },
+        {
+          duration: 400,
+          easing: 'ease-in',
+          pseudoElement: isDark() ? '::view-transition-old(theme-toggle)' : '::view-transition-new(theme-toggle)',
+        },
+      );
+    });
+  };
+
+  // set default theme, ideally load from local storage and respect OS preference
+  document.documentElement.dataset.theme = 'light';
+  document.getElementById('moon').classList.add('activeThemeIcon');
+
+  /** @type {?HTMLButtonElement} */
+  const themeToggle = document.getElementById('theme-toggle');
+  if (!(themeToggle instanceof HTMLButtonElement)) {
+    return;
+  }
+
+  themeToggle.addEventListener('click', themeToggleClickHandler, false);
 }
+
 var swiper;
 function heroSlider() {
   $('.hero-slider').each(function (el, index) {

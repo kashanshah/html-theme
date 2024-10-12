@@ -3,7 +3,7 @@
 <!--[if IE 8 ]>    <html lang="en-us" class="isie ie8 oldie no-js"> <![endif]-->
 <!--[if IE 9 ]>    <html lang="en-us" class="isie ie9 no-js"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en-us" class="no-js"> <!--<![endif]-->
-<html lang="en-us" dir="ltr" class="no-js">
+<html lang="en-us" dir="ltr" class="no-js" data-bs-theme="dark">
 <head>
   <title>Teknoffice - Multipurpose Theme</title>
   @@include('./includes/meta.html')
@@ -18,15 +18,15 @@
   <div class="swiper-wrapper hero-slides-wrapper">
     <!-- Slides -->
     <div class="swiper-slide hero-banner has-overlay">
-      <div class="hero-banner-img">
-        <img src="./assets/images/home-banner.jpg" alt="Home Banner" class="img-fluid" />
+      <div class="hero-banner-img img-on-right">
+        <img src="./assets/images/home-banner-main.png" alt="Home Banner" class="img-fluid" />
       </div>
       <div class="hero-banner-content">
         <div class="container">
           <div class="row">
             <div class="col-md-7">
               <small>APPS NOW CREATIVE </small>
-              <h1>MOBILE APP <span class="focused-keyword">DEVELOPMENT</span></h1>
+              <h1 class="text-keyword">MOBILE APP <span class="focused-keyword">DEVELOPMENT</span></h1>
               <p class="lead">Experienced teams and a agile framework, we prioritise the commercial goals of the client to deliver the highest business value.</p>
               <a href="#" class="btn btn-primary btn-lg">Get Started</a>
             </div>
@@ -91,6 +91,20 @@
   <!-- If we need scrollbar -->
   <div class="swiper-scrollbar"></div>
 </div>
+
+<!-- Lead Content Section -->
+<section class="lead-section-with-shadow-text">
+  <h2 class="vertical-design-heading">APP XEON</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10">
+        <h2 class="lead-section-title"><span class="text-keyword">EXPERIENCED TEAMS </span><br/>AND A AGILE</h2>
+        <p class="lead-section-paragraph">framework, we prioritise the commercial goals of the client to deliver the highest business value.</p>
+        <a href="#" class="btn btn-outline">Why Choose Us</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 @@include('./includes/footer.html')
 @@include('./includes/scripts.html')

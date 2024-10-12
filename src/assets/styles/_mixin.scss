@@ -85,3 +85,74 @@ $grid-breakpoints: (
     @include visually-hidden();
   }
 }
+
+@mixin section-padding($size: lg) {
+  @if $size == sm {
+    padding-top: rem(10);  // 10px = 0.625rem
+    padding-bottom: rem(10);
+
+    @media (min-width: 768px) {
+      padding-top: rem(20);  // 20px = 1.25rem
+      padding-bottom: rem(20);
+    }
+
+    @media (min-width: 1024px) {
+      padding-top: rem(30);  // 30px = 1.875rem
+      padding-bottom: rem(30);
+    }
+  } @else if $size == md {
+    padding-top: rem(20);  // 20px = 1.25rem
+    padding-bottom: rem(20);
+
+    @media (min-width: 768px) {
+      padding-top: rem(40);  // 40px = 2.5rem
+      padding-bottom: rem(40);
+    }
+
+    @media (min-width: 1024px) {
+      padding-top: rem(60);  // 60px = 3.75rem
+      padding-bottom: rem(60);
+    }
+  } @else if $size == lg {
+    padding-top: rem(40);  // 40px = 2.5rem
+    padding-bottom: rem(40);
+
+    @media (min-width: 768px) {
+      padding-top: rem(60);  // 60px = 3.75rem
+      padding-bottom: rem(60);
+    }
+
+    @media (min-width: 1024px) {
+      padding-top: rem(90);  // 90px = 5.625rem (default for lg)
+      padding-bottom: rem(90);
+    }
+  } @else if $size == xl {
+    padding-top: rem(60);  // 60px = 3.75rem
+    padding-bottom: rem(60);
+
+    @media (min-width: 768px) {
+      padding-top: rem(90);  // 90px = 5.625rem
+      padding-bottom: rem(90);
+    }
+
+    @media (min-width: 1024px) {
+      padding-top: rem(120);  // 120px = 7.5rem
+      padding-bottom: rem(120);
+    }
+  }
+}
+
+@mixin transition($property, $duration, $timing) {
+  -webkit-transition: $property $duration $timing;
+  -moz-transition: $property $duration $timing;
+  -o-transition: $property $duration $timing;
+  transition: $property $duration $timing;
+}
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -ms-transform: $transform;
+  -o-transform: $transform;
+  transform: $transform;
+}

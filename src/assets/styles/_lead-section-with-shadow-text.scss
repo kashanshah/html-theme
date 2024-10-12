@@ -1,0 +1,70 @@
+.lead-section-with-shadow-text {
+  position: relative;
+  overflow: hidden;
+  @include section-padding();
+  .container {
+    z-index: 1;
+    position: relative;
+  }
+}
+
+.lead-section-title {
+  font-size: rem(100);
+  margin-bottom: rem(30);
+  @include media-breakpoint-down(lg) {
+    font-size: rem(75);
+    margin-bottom: rem(20);
+  }
+  @include media-breakpoint-down(md) {
+    font-size: rem(50);
+    margin-bottom: rem(16);
+  }
+}
+
+.lead-section-paragraph {
+  font-size: rem(40);
+  margin-bottom: rem(30);
+  @include media-breakpoint-down(lg) {
+    font-size: rem(28);
+    margin-bottom: rem(20);
+  }
+  @include media-breakpoint-down(md) {
+    font-size: rem(20);
+    margin-bottom: rem(16);
+  }
+}
+
+.vertical-design-heading {
+  @extend .text-keyword;
+  opacity: .1;
+  font-size: 15vw;
+  @include transform(rotate(-180deg) translate(-20%, 120%));
+  position: absolute;
+  z-index: 0;
+  right: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  transform-origin: 50% 50%;
+  animation: marquee 8s linear infinite;
+  writing-mode: vertical-rl;
+  -ms-writing-mode: bt-rl;
+  -webkit-writing-mode: vertical-rl;
+  white-space: nowrap;
+  @include media-breakpoint-down(lg) {
+    font-size: 20vw;
+  }
+  @include media-breakpoint-down(lg) {
+    font-size: 25vw;
+  }
+}
+
+@keyframes marquee {
+  from {
+    @include transform(rotate(-180deg) translate(-20%, 120%));
+  }
+
+  to {
+    @include transform(rotate(-180deg) translate(-20%, -120%));
+  }
+}

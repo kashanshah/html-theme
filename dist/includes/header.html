@@ -62,13 +62,67 @@
               <span class="text-icon-label">(437) 868 0249</span>
             </a>
             <a href="#" class="menu-cta-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
-              <i class="fas fa-shopping-cart"></i>
+              <i class="icon icon-shopping-cart"></i>
               <span class="cart-item-count">
     3 <!-- Example count, replace with dynamic count as needed -->
     <span class="visually-hidden">Cart items</span>
   </span>
             </a>
+            <button class="menu-cta-link" id="theme-toggle">
+              <svg id="SVGThemeSwitch" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                <style>
+                  .clr {
+                    fill: none;
+                    stroke: currentColor;
+                    stroke-width: 2;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    display: none;
+                    will-change: transform, opacity;
+                  }
+
+                  .activeThemeIcon {
+                    display: block;
+                  }
+
+                  .animateThemeIcon {
+                    animation: switchThemeIcon 0.25s ease-in-out;
+                    transform-origin: center center;
+                    animation-iteration-count: 1;
+                  }
+
+                  @keyframes switchThemeIcon {
+                    30% {
+                      transform: translateY(0.3em) scale(0.5);
+                      opacity: 0;
+                    }
+
+                    0%,
+                    100% {
+                      transform: translateY(0px) scale(1);
+                      opacity: 1;
+                    }
+                  }
+                </style>
+
+                <g id="moon" class="clr">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3A7 7 0 0 0 21 12.79z" />
+                </g>
+                <g id="sun" class="clr">
+                  <circle cx="12" cy="12" r="5" />
+                  <path d="M12 1v2" />
+                  <path d="M12 21v2" />
+                  <path d="M4.22 4.22l1.42 1.42" />
+                  <path d="M18.36 18.36l1.42 1.42" />
+                  <path d="M1 12h2" />
+                  <path d="M21 12h2" />
+                  <path d="M4.22 19.78l1.42-1.42" />
+                  <path d="M18.36 5.64l1.42-1.42" />
+                </g>
+              </svg>
+            </button>
             <a href="#" class="btn btn-primary d-none d-md-inline-block">Get Started</a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>

@@ -3,7 +3,7 @@
 <!--[if IE 8 ]>    <html lang="en-us" class="isie ie8 oldie no-js"> <![endif]-->
 <!--[if IE 9 ]>    <html lang="en-us" class="isie ie9 no-js"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en-us" class="no-js"> <!--<![endif]-->
-<html lang="en-us" dir="ltr" class="no-js">
+<html lang="en-us" dir="ltr" class="no-js" data-bs-theme="dark">
 <head>
   <title>Teknoffice - Multipurpose Theme</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,6 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
 <link id="bootstrap-css" rel="stylesheet" href="assets/css/bootstrap.css" />
 <link rel="stylesheet" href="assets/css/swiper-bundle.css"/>
@@ -95,13 +96,67 @@
               <span class="text-icon-label">(437) 868 0249</span>
             </a>
             <a href="#" class="menu-cta-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
-              <i class="fas fa-shopping-cart"></i>
+              <i class="icon icon-shopping-cart"></i>
               <span class="cart-item-count">
     3 <!-- Example count, replace with dynamic count as needed -->
     <span class="visually-hidden">Cart items</span>
   </span>
             </a>
+            <button class="menu-cta-link" id="theme-toggle">
+              <svg id="SVGThemeSwitch" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                <style>
+                  .clr {
+                    fill: none;
+                    stroke: currentColor;
+                    stroke-width: 2;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    display: none;
+                    will-change: transform, opacity;
+                  }
+
+                  .activeThemeIcon {
+                    display: block;
+                  }
+
+                  .animateThemeIcon {
+                    animation: switchThemeIcon 0.25s ease-in-out;
+                    transform-origin: center center;
+                    animation-iteration-count: 1;
+                  }
+
+                  @keyframes switchThemeIcon {
+                    30% {
+                      transform: translateY(0.3em) scale(0.5);
+                      opacity: 0;
+                    }
+
+                    0%,
+                    100% {
+                      transform: translateY(0px) scale(1);
+                      opacity: 1;
+                    }
+                  }
+                </style>
+
+                <g id="moon" class="clr">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3A7 7 0 0 0 21 12.79z" />
+                </g>
+                <g id="sun" class="clr">
+                  <circle cx="12" cy="12" r="5" />
+                  <path d="M12 1v2" />
+                  <path d="M12 21v2" />
+                  <path d="M4.22 4.22l1.42 1.42" />
+                  <path d="M18.36 18.36l1.42 1.42" />
+                  <path d="M1 12h2" />
+                  <path d="M21 12h2" />
+                  <path d="M4.22 19.78l1.42-1.42" />
+                  <path d="M18.36 5.64l1.42-1.42" />
+                </g>
+              </svg>
+            </button>
             <a href="#" class="btn btn-primary d-none d-md-inline-block">Get Started</a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -166,15 +221,15 @@
   <div class="swiper-wrapper hero-slides-wrapper">
     <!-- Slides -->
     <div class="swiper-slide hero-banner has-overlay">
-      <div class="hero-banner-img">
-        <img src="./assets/images/home-banner.jpg" alt="Home Banner" class="img-fluid" />
+      <div class="hero-banner-img img-on-right">
+        <img src="./assets/images/home-banner-main.png" alt="Home Banner" class="img-fluid" />
       </div>
       <div class="hero-banner-content">
         <div class="container">
           <div class="row">
             <div class="col-md-7">
               <small>APPS NOW CREATIVE </small>
-              <h1>MOBILE APP <span class="focused-keyword">DEVELOPMENT</span></h1>
+              <h1 class="text-keyword">MOBILE APP <span class="focused-keyword">DEVELOPMENT</span></h1>
               <p class="lead">Experienced teams and a agile framework, we prioritise the commercial goals of the client to deliver the highest business value.</p>
               <a href="#" class="btn btn-primary btn-lg">Get Started</a>
             </div>
@@ -239,6 +294,20 @@
   <!-- If we need scrollbar -->
   <div class="swiper-scrollbar"></div>
 </div>
+
+<!-- Lead Content Section -->
+<section class="lead-section-with-shadow-text">
+  <h2 class="vertical-design-heading">APP XEON</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10">
+        <h2 class="lead-section-title"><span class="text-keyword">EXPERIENCED TEAMS </span><br/>AND A AGILE</h2>
+        <p class="lead-section-paragraph">framework, we prioritise the commercial goals of the client to deliver the highest business value.</p>
+        <a href="#" class="btn btn-outline">Why Choose Us</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer>
   <div class="container">

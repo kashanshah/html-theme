@@ -109,6 +109,9 @@ h1, .h1 {
   @include media-breakpoint-down(lg) {
     font-size: rem(50);
   }
+  @include media-breakpoint-down(md) {
+    font-size: rem(40);
+  }
 }
 
 h2, .h2 {
@@ -116,33 +119,48 @@ h2, .h2 {
   @include media-breakpoint-down(lg) {
     font-size: rem(40);
   }
+  @include media-breakpoint-down(md) {
+    font-size: rem(36);
+  }
 }
 
 h3, .h3 {
   font-size: rem(40);
   @include media-breakpoint-down(lg) {
-    font-size: rem(30);
+    font-size: rem(36);
+  }
+  @include media-breakpoint-down(md) {
+    font-size: rem(28);
   }
 }
 
 h4, .h4 {
-  font-size: rem(30);
+  font-size: rem(36);
   @include media-breakpoint-down(lg) {
+    font-size: rem(28);
+  }
+  @include media-breakpoint-down(md) {
     font-size: rem(24);
   }
 }
 
 h5, .h5 {
-  font-size: rem(24);
+  font-size: rem(28);
   @include media-breakpoint-down(lg) {
-    font-size: rem(20);
+    font-size: rem(24);
+  }
+  @include media-breakpoint-down(md) {
+    font-size: rem(22);
   }
 }
 
 h6, .h6 {
-  font-size: rem(20);
+  font-size: rem(24);
   @include media-breakpoint-down(lg) {
-    font-size: rem(18);
+    font-size: rem(22);
+  }
+  @include media-breakpoint-down(md) {
+    font-size: rem(20);
   }
 }
 
@@ -162,3 +180,11 @@ h6, .h6 {
   -webkit-text-fill-color: transparent;
 }
 
+.text-keyword {
+  color: var(--bs-body-bg);                  /* Text color */
+  text-shadow:
+    2px 2px 0 var(--bs-body-color),             /* Right and down */
+    -2px -2px 0 var(--bs-body-color),           /* Left and up */
+    -2px 2px 0 var(--bs-body-color),            /* Left and down */
+    2px -2px 0 var(--bs-body-color);            /* Right and up */
+}

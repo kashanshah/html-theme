@@ -1,0 +1,35 @@
+::view-transition-old(theme-toggle),
+::view-transition-new(theme-toggle) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+[data-bs-theme="dark"]::view-transition-new(theme-toggle) {
+  z-index: -1;
+}
+
+:root {
+  color-scheme: dark light;
+  view-transition-name: theme-toggle;
+}
+
+[data-bs-theme="light"]:root {
+  color-scheme: light only;
+}
+
+[data-bs-theme="dark"]:root {
+  color-scheme: dark only;
+  img:not([src*=".svg"]) {
+    filter: brightness(0.8) contrast(1.2);
+  }
+}
+
+button#theme-toggle {
+  border: 0;
+  background: none;
+  font-size: 1.5em;
+
+  #SVGThemeSwitch {
+    color: var(--bs-body-color);
+  }
+}

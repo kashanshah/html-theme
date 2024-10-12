@@ -29,26 +29,20 @@
     left: 0;
     height: 100%;
     width: 100%;
-    //&:before {
-    //  content: '';
-    //  background: url("../images/gradient.png") no-repeat;
-    //  background-size: 100% 100%;
-    //  width: rem(460);
-    //  height: rem(730);
-    //  position: absolute;
-    //  left: 0;
-    //  top: 0;
-    //  //transform: translate(-0%, 0);
-    //  bottom: auto;
-    //  margin: auto;
-    //  margin-inline-start: 0;
-    //  margin-inline-end: auto;
-    //  animation: 40s linear 0s infinite normal none running pulse;
-    //}
     img {
       height: 100%;
       width: 100%;
       object-fit: cover;
+    }
+    &.img-on-right {
+      right: 0;
+      left: auto;
+      text-align: right;
+      img {
+        width: auto;
+        height: 100%;
+        object-fit: none;
+      }
     }
   }
   .hero-banner-content {
@@ -71,12 +65,6 @@
     h1 {
       font-size: rem(80);
       margin-bottom: rem(16);
-      color: var(--bs-black);                  /* Text color */
-      text-shadow:
-        2px 2px 0 var(--bs-white),             /* Right and down */
-        -2px -2px 0 var(--bs-white),           /* Left and up */
-        -2px 2px 0 var(--bs-white),            /* Left and down */
-        2px -2px 0 var(--bs-white);            /* Right and up */
 
       @include media-breakpoint-down(lg) {
         font-size: rem(40);
