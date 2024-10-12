@@ -88,9 +88,9 @@ Create a new branch from `development`. Commit your code in that branch. Create 
 If you're not sure about anything, kindly reach out anyone in the frontend development team member to help you.
 
 
-# Hero Banner
+# Components
 
-## Hero Banner
+## Hero Banner Component
 
 The Hero Banner component can be customized using the following `data-` attributes:
 
@@ -121,3 +121,10 @@ The Hero Banner component can be customized using the following `data-` attribut
   - `false`: Disables particles.
 
 `hero-banner` has class 'has-overlay' if you want to add overlay on the image.
+
+## Lead Content Component
+The Lead Content component has following elements:
+- `vertical-design-heading`: This is a vertical text that keeps on scrolling top to bottom on the right side of the container.
+- `lead-section-title`: This is the title of the section.
+- `lead-section-paragraph`: This is the content of the section.
+Additionally, you can add call to action button as needed.

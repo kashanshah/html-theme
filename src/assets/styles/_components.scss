@@ -188,3 +188,9 @@ h6, .h6 {
     -2px 2px 0 var(--bs-body-color),            /* Left and down */
     2px -2px 0 var(--bs-body-color);            /* Right and up */
 }
+
+.main-section {
+  position: relative;
+  overflow: hidden;
+  @include section-padding();
+}

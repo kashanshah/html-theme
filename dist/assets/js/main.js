@@ -6,6 +6,7 @@ console.log(
 $(document).ready(function () {
   colorTheme();
   heroSlider();
+  clientsSlider();
 });
 
 function colorTheme() {
@@ -75,7 +76,6 @@ function colorTheme() {
   themeToggle.addEventListener('click', themeToggleClickHandler, false);
 }
 
-var swiper;
 function heroSlider() {
   $('.hero-slider').each(function (el, index) {
     const $this = $(this);
@@ -168,7 +168,7 @@ function heroSlider() {
         effect: effect || 'slide',
       };
     }
-    swiper = new Swiper($this.get(0), {
+    var swiper = new Swiper($this.get(0), {
       pagination: {
         el: '.swiper-pagination',
         type: 'fraction',
@@ -193,4 +193,45 @@ function heroSlider() {
 
 function makeId() {
   return '_' + Math.random().toString(36).substr(2, 9);
+}
+
+function clientsSlider() {
+  $('.clients-slider').each(function () {
+    const $this = $(this);
+    var swiper = new Swiper($this.get(0), {
+      slidesPerView: $this.attr('data-slides-per-view') || 5,
+      spaceBetween: $this.attr('data-space-between') || 30,
+      loop: $this.attr('data-loop') !== 'false',
+      pagination: {
+        el: $this.find('.swiper-pagination').get(0),
+        clickable: true,
+      },
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        0: {
+          // sm
+          slidesPerView: $this.attr('data-slides-per-view-sm') || 1,
+        },
+        576: {
+          // md
+          slidesPerView: $this.attr('data-slides-per-view-md') || 2,
+        },
+        768: {
+          // lg
+          slidesPerView: $this.attr('data-slides-per-view-lg') || 3,
+        },
+        992: {
+          // xl
+          slidesPerView: $this.attr('data-slides-per-view-xl') || $this.attr('data-slides-per-view') || 4,
+        },
+        1200: {
+          // xxl
+          slidesPerView: $this.attr('data-slides-per-view-xxl') || $this.attr('data-slides-per-view') || 5,
+        },
+      },
+    });
+  });
 }

@@ -142,7 +142,7 @@ $grid-breakpoints: (
   }
 }
 
-@mixin transition($property, $duration, $timing) {
+@mixin transition($property: all, $duration: .5s, $timing: ease) {
   -webkit-transition: $property $duration $timing;
   -moz-transition: $property $duration $timing;
   -o-transition: $property $duration $timing;

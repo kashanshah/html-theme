@@ -1,0 +1,22 @@
+.clients-slider {
+  overflow: hidden;
+  position: relative;
+  .swiper-wrapper {
+    align-items: center;
+    .clients-slide {
+      text-align: center;
+      .logo-img {
+        filter: grayscale(1);
+        @include transition();
+        max-width: 100%;
+        &:hover {
+          filter: grayscale(0);
+        }
+      }
+    }
+  }
+  .swiper-pagination {
+    position: relative;
+    margin: rem(30) 0;
+  }
+}

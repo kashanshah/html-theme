@@ -2068,6 +2068,25 @@ h6, .h6 {
   text-shadow: 2px 2px 0 var(--bs-body-color), -2px -2px 0 var(--bs-body-color), -2px 2px 0 var(--bs-body-color), 2px -2px 0 var(--bs-body-color); /* Right and up */
 }
 
+.main-section {
+  position: relative;
+  overflow: hidden;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+@media (min-width: 768px) {
+  .main-section {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+  }
+}
+@media (min-width: 1024px) {
+  .main-section {
+    padding-top: 5.625rem;
+    padding-bottom: 5.625rem;
+  }
+}
+
 ::view-transition-old(theme-toggle),
 ::view-transition-new(theme-toggle) {
   animation: none;
@@ -2628,4 +2647,29 @@ button#theme-toggle #SVGThemeSwitch {
     -o-transform: rotate(-180deg) translate(-20%, -120%);
     transform: rotate(-180deg) translate(-20%, -120%);
   }
+}
+.clients-slider {
+  overflow: hidden;
+  position: relative;
+}
+.clients-slider .swiper-wrapper {
+  align-items: center;
+}
+.clients-slider .swiper-wrapper .clients-slide {
+  text-align: center;
+}
+.clients-slider .swiper-wrapper .clients-slide .logo-img {
+  filter: grayscale(1);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  max-width: 100%;
+}
+.clients-slider .swiper-wrapper .clients-slide .logo-img:hover {
+  filter: grayscale(0);
+}
+.clients-slider .swiper-pagination {
+  position: relative;
+  margin: 1.875rem 0;
 }
