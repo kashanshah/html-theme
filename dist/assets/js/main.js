@@ -43,15 +43,101 @@ function colorTheme() {
 }
 var swiper;
 function heroSlider() {
-  swiper = new Swiper('.hero-slider', {
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'fraction',
-      formatFractionCurrent: (number) => `0${number}`.slice(-2),
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+  $('.hero-slider').each(function (el, index) {
+    const $this = $(this);
+    const creativeEffects = [
+      {
+        prev: {
+          shadow: true,
+          translate: [0, 0, -400],
+        },
+        next: {
+          translate: ['100%', 0, 0],
+        },
+      },
+      {
+        prev: {
+          shadow: true,
+          translate: ['-120%', 0, -500],
+        },
+        next: {
+          shadow: true,
+          translate: ['120%', 0, -500],
+        },
+      },
+      {
+        prev: {
+          shadow: true,
+          translate: ['-20%', 0, -1],
+        },
+        next: {
+          translate: ['100%', 0, 0],
+        },
+      },
+      {
+        prev: {
+          shadow: true,
+          translate: [0, 0, -800],
+          rotate: [180, 0, 0],
+        },
+        next: {
+          shadow: true,
+          translate: [0, 0, -800],
+          rotate: [-180, 0, 0],
+        },
+      },
+      {
+        prev: {
+          shadow: true,
+          translate: ['-125%', 0, -800],
+          rotate: [0, 0, -90],
+        },
+        next: {
+          shadow: true,
+          translate: ['125%', 0, -800],
+          rotate: [0, 0, 90],
+        },
+      },
+      {
+        prev: {
+          shadow: true,
+          origin: 'left center',
+          translate: ['-5%', 0, -200],
+          rotate: [0, 100, 0],
+        },
+        next: {
+          origin: 'right center',
+          translate: ['5%', 0, -200],
+          rotate: [0, -100, 0],
+        },
+      },
+    ];
+    function getEffect(effect = '') {
+      if (effect.includes('creative')) {
+        const effectName = effect.split('-')[0];
+        const effectIndex = effect.split('-')?.[1] || 0;
+        return {
+          effect: effectName || 'slide',
+          creativeEffect: creativeEffects[Number(effectIndex) - 1] || creativeEffects[0],
+        };
+      }
+      return {
+        effect: effect || 'slide',
+      };
+    }
+    swiper = new Swiper($this.get(0), {
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+        formatFractionCurrent: (number) => `0${number}`.slice(-2),
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      grabCursor: $this.attr('data-grab-cursor') === 'true',
+      loop: $this.attr('data-loop') === 'true',
+      ...getEffect($this.attr('data-effect')),
+    });
   });
 }

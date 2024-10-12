@@ -46,13 +46,17 @@
 .hero-slider-navigation {
   position: absolute;
   z-index: 3;
-  display: flex;
-  align-items: center;
   bottom: rem(30);
-  width: auto;
+  width: 100%;
   height: auto;
   --swiper-navigation-color: var(--bs-white);
-  gap: rem(44);
+  .hero-slider-buttons {
+    display: flex;
+    gap: rem(44);
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start;
+  }
   .swiper-button-prev,
   .swiper-button-next {
     position: static;
@@ -75,6 +79,7 @@
   .hero-slider-pagination {
     font-size: 0;
     position: static;
+    width: auto;
     .swiper-pagination-current {
       font-size: rem(50);
       line-height: .5;

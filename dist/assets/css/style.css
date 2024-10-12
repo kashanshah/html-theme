@@ -2140,13 +2140,17 @@ h6, .h6 {
 .hero-slider-navigation {
   position: absolute;
   z-index: 3;
-  display: flex;
-  align-items: center;
   bottom: 1.875rem;
-  width: auto;
+  width: 100%;
   height: auto;
   --swiper-navigation-color: var(--bs-white);
+}
+.hero-slider-navigation .hero-slider-buttons {
+  display: flex;
   gap: 2.75rem;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-start;
 }
 .hero-slider-navigation .swiper-button-prev,
 .hero-slider-navigation .swiper-button-next {
@@ -2171,6 +2175,7 @@ h6, .h6 {
 .hero-slider-navigation .hero-slider-pagination {
   font-size: 0;
   position: static;
+  width: auto;
 }
 .hero-slider-navigation .hero-slider-pagination .swiper-pagination-current {
   font-size: 3.125rem;

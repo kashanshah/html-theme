@@ -11,8 +11,9 @@
 
 <body>
 @@include('./includes/header.html')
-<!-- Slider main container -->
-<div class="swipe hero-slider">
+
+<!-- Hero Slider -->
+<div class="swipe hero-slider" data-loop="true" data-grab-cursor="true" data-effect="creative-1" >
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper hero-slides-wrapper">
     <!-- Slides -->
@@ -24,7 +25,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-6">
-              <h1><span class="h2">App Xeon Creative </span>Mobile App <br/>Development</h1>
+              <h1><span class="h2">1. App Xeon Creative </span>Mobile App <br/>Development</h1>
               <p class="lead">Experienced teams and a agile framework, we prioritise the commercial goals of the client to deliver the highest business value.</p>
               <a href="#" class="btn btn-primary btn-lg">Get Started</a>
               <a href="#" class="btn btn-secondary">Get Started</a>
@@ -41,7 +42,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-6">
-              <h1><span class="h2">App Xeon Creative </span>Mobile App <br/>Development</h1>
+              <h1><span class="h2">2. App Xeon Creative </span>Mobile App <br/>Development</h1>
               <p class="lead">Experienced teams and a agile framework, we prioritise the commercial goals of the client to deliver the highest business value.</p>
               <a href="#" class="btn btn-primary btn-lg">Get Started</a>
               <a href="#" class="btn btn-secondary">Get Started</a>
@@ -140,9 +141,17 @@
 
   <!-- If we need navigation buttons -->
   <div class="hero-slider-navigation">
-    <div class="hero-slider-pagination swiper-pagination"></div>
-    <div class="swiper-button-prev"><i class="icon icon-arrow-left"></i> PRE</div>
-    <div class="swiper-button-next"><i class="icon icon-arrow-right"></i> NEXT</div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="hero-slider-buttons">
+            <div class="hero-slider-pagination swiper-pagination"></div>
+            <div class="swiper-button-prev"><i class="icon icon-arrow-left"></i> PRE</div>
+            <div class="swiper-button-next"><i class="icon icon-arrow-right"></i> NEXT</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- If we need scrollbar -->

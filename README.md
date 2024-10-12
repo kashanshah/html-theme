@@ -86,3 +86,27 @@ Create a new branch from `development`. Commit your code in that branch. Create 
 
 ### Have questions?
 If you're not sure about anything, kindly reach out anyone in the frontend development team member to help you.
+
+
+# Hero Banner
+
+## Hero Banner
+
+The Hero Banner component can be customized using the following `data-` attributes:
+
+- `data-effect`: Specifies the transition effect for the slider. Possible values include:
+  - `slide`: Default sliding effect.
+  - `fade`: Fade effect.
+  - `cube`: Cube effect.
+  - `coverflow`: Coverflow effect.
+  - `flip`: Flip effect.
+  - `cards`: Cards effect.
+  - `creative-1` to `creative-6`: Various creative effects with different animations.
+
+- `data-grab-cursor`: Enables or disables the grab cursor. Possible values:
+  - `true`: Enables the grab cursor.
+  - `false`: Disables the grab cursor.
+
+- `data-loop`: Enables or disables looping of the slides. Possible values:
+  - `true`: Enables looping.
+  - `false`: Disables looping.
