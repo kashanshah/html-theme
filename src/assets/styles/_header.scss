@@ -108,7 +108,7 @@
     display: flex;
     align-items: center;
     gap: var(--bs-navbar-nav-link-padding-x );
-    margin-inline-start: calc( var(--bs-navbar-nav-link-padding-x ) * 2);
+    margin-inline-start: calc( var(--bs-navbar-nav-link-padding-x ));
     @include media-breakpoint-down(lg) {
       width: 50%;
       gap: rem(16);
@@ -121,8 +121,7 @@
       align-items: center;
       justify-content: center;
       flex-wrap: nowrap;
-      padding-top: var(--bs-navbar-nav-link-padding-y );
-      padding-bottom: var(--bs-navbar-nav-link-padding-y );
+      padding: var(--bs-navbar-nav-link-padding-y ) 0;
       text-decoration: none;
       color: var(--bs-nav-link-color);
       position: relative;
