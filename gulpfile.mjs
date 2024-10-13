@@ -46,10 +46,10 @@ function scripts() {
     './node_modules/bootstrap/dist/js/bootstrap.bundle.js',
     './node_modules/swiper/swiper-bundle.js',
     './node_modules/particles.js/particles.js',
+    './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
     // './node_modules/slick-carousel/slick/slick.js',
     // './node_modules/jquery-inview/jquery.inview.js',
     // './node_modules/gsap/dist/all.js',
-    // './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
     'src/assets/js/**/*.js'
   ])
     .pipe(prettier({ singleQuote: true, semi: true }))

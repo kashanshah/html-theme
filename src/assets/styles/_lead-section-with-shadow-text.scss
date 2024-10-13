@@ -9,35 +9,35 @@
 }
 
 .lead-section-title {
-  font-size: rem(100);
-  margin-bottom: rem(30);
-  @include media-breakpoint-down(lg) {
+  font-size: rem(50);
+  margin-bottom: rem(16);
+  @include media-breakpoint-up(md) {
     font-size: rem(75);
     margin-bottom: rem(20);
   }
-  @include media-breakpoint-down(md) {
-    font-size: rem(50);
-    margin-bottom: rem(16);
+  @include media-breakpoint-up(lg) {
+    font-size: rem(100);
+    margin-bottom: rem(30);
   }
 }
 
 .lead-section-paragraph {
-  font-size: rem(40);
-  margin-bottom: rem(30);
-  @include media-breakpoint-down(lg) {
+  font-size: rem(20);
+  margin-bottom: rem(16);
+  @include media-breakpoint-up(md) {
     font-size: rem(28);
     margin-bottom: rem(20);
   }
-  @include media-breakpoint-down(md) {
-    font-size: rem(20);
-    margin-bottom: rem(16);
+  @include media-breakpoint-up(lg) {
+    font-size: rem(40);
+    margin-bottom: rem(30);
   }
 }
 
 .vertical-design-heading {
   @extend .text-keyword;
   opacity: .1;
-  font-size: 15vw;
+  font-size: 25vw;
   @include transform(rotate(-180deg) translate(-20%, 120%));
   position: absolute;
   z-index: 0;
@@ -51,11 +51,11 @@
   -ms-writing-mode: bt-rl;
   -webkit-writing-mode: vertical-rl;
   white-space: nowrap;
-  @include media-breakpoint-down(lg) {
+  @include media-breakpoint-up(md) {
     font-size: 20vw;
   }
-  @include media-breakpoint-down(lg) {
-    font-size: 25vw;
+  @include media-breakpoint-up(lg) {
+    font-size: 15vw;
   }
 }
 
