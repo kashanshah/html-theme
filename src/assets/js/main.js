@@ -175,7 +175,7 @@ function heroSlider() {
       };
     }
     var swiper = new Swiper($this.get(0), {
-      lazy: ($this.attr('data-lazy') !== 'false'),
+      lazy: (boolToStringBool($this.attr('data-lazy')) !== 'false'),
       pagination: {
         el: ".swiper-pagination",
         type: "fraction",
@@ -186,8 +186,8 @@ function heroSlider() {
         prevEl: ".swiper-button-prev",
       },
       grabCursor: $this.attr('data-grab-cursor').toString() === 'true',
-      loop: $this.attr('data-loop') === 'true',
-      autoplay: (!!$this.attr('data-autoplay') && $this.attr('data-autoplay')) !== 'false' ? {
+      loop: boolToStringBool($this.attr('data-loop')) === 'true',
+      autoplay: boolToStringBool($this.attr('data-autoplay')) === 'true' ? {
         delay: Number($this.attr('data-autoplay')) || 5000,
       } : false,
       ...getEffect($this.attr('data-effect')),
@@ -199,21 +199,38 @@ function makeId() {
   return '_' + Math.random().toString(36).substr(2, 9);
 }
 
+function boolToStringBool(value) {
+  if(value === true || value === 'true') {
+    return 'true';
+  }
+  if(value === false || value === 'false') {
+    return 'false';
+  }
+  if(!!value) {
+    return 'true';
+  }
+  return '';
+}
+
 function clientsSlider() {
   $('.clients-slider').each(function() {
     const $this = $(this);
     var swiper = new Swiper($this.get(0), {
-      lazy: ($this.attr('data-lazy') !== 'false'),
       spaceBetween: $this.attr('data-gap') || 30,
-      loop: ($this.attr('data-loop') !== 'false'),
-      pagination: {
+      lazy: (boolToStringBool($this.attr('data-lazy')) !== 'false'),
+      loop: (boolToStringBool($this.attr('data-loop')) !== 'false'),
+      navigation: boolToStringBool($this.attr('data-navigation')) !== 'false' ?  {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      } : false,
+      pagination: boolToStringBool($this.attr('data-pagination')) !== 'false' ? {
         el: '.swiper-pagination',
         clickable: true,
-      },
-      autoplay: {
-        delay: 2500,
+      } : false,
+      autoplay: boolToStringBool($this.attr('data-autoplay')) === 'true' ? {
+        delay: $this.attr('data-autoplay') || 2500,
         disableOnInteraction: false,
-      },
+      } : false,
       breakpoints: {
         0: { // default
           slidesPerView: $this.attr('data-slides-per-view'),
@@ -253,8 +270,8 @@ function gallerySlider() {
     const $this = $(this);
     var swiper = new Swiper($this.get(0), {
       spaceBetween: $this.attr('data-gap') || 30,
-      lazy: ($this.attr('data-lazy') !== 'false'),
-      loop: ($this.attr('data-loop') !== 'false'),
+      lazy: (boolToStringBool($this.attr('data-lazy')) !== 'false'),
+      loop: (boolToStringBool($this.attr('data-loop')) !== 'false'),
       pagination: {
         el: '.swiper-pagination',
         clickable: true,

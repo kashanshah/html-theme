@@ -18,7 +18,7 @@
     .navbar-brand {
       margin-inline-end: rem(32);
       @include media-breakpoint-down(lg) {
-        margin-inline-end: 0;
+        margin: 0;
         max-width: 50%;
       }
     }

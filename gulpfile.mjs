@@ -25,6 +25,7 @@ function clean() {
 function styles() {
   return gulp.src([
     './node_modules/bootstrap/dist/css/bootstrap.css',
+    './node_modules/bootstrap/dist/css/bootstrap.rtl.css',
     './node_modules/swiper/swiper-bundle.css',
     'src/assets/styles/**/*.scss'
   ])

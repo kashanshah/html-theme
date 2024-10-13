@@ -153,8 +153,12 @@ The Clients/Partners Section component showcases logos of partnered clients or p
 
 - **Gap Control**: The space between slides can be easily adjusted using the `data-gap` attribute, providing flexibility in layout design.
 
-- **Autoplay Functionality**: The slider features an autoplay function that automatically transitions between slides, enhancing user engagement without requiring interaction.
+- **Looping**: The slider has infinite loop through slides continuously. You can disable looping by setting the `data-loop` attribute to `"false"`.
 
-- **Lazy Loading**: The slider supports lazy loading of images to improve performance and reduce initial loading time, especially beneficial for pages with many images.
+- **Autoplay Functionality**: The slider supports autoplay, allowing the slides to transition automatically. You can turn off autoplay by setting the `data-autoplay` attribute to `"false"`, or you could use `data-autoplay="2500"` to specify the delay in milliseconds.
+
+- **Lazy Loading**: The component includes lazy loading for images, enhancing performance by loading images only when they enter the viewport. By default, lazy loading is enabled, but you can disable it by setting the `data-lazy` attribute to `"false"`.
 
 - **Pagination**: The component includes pagination controls, allowing users to navigate through the slides efficiently. Pagination dots are clickable, enhancing usability.
+
+- **Navigation Controls**: You can also enable/disable navigation controls (previous and next buttons) using the `data-navigation` attribute. By default, navigation is enabled, but you can disable it by setting `data-navigation="false"`.
