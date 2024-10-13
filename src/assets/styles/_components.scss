@@ -116,51 +116,66 @@ h1, .h1 {
 
 h2, .h2 {
   font-size: rem(50);
+  margin-bottom: rem(30);
   @include media-breakpoint-down(lg) {
     font-size: rem(40);
+    margin-bottom: rem(20);
   }
   @include media-breakpoint-down(md) {
     font-size: rem(36);
+    margin-bottom: rem(16);
   }
 }
 
 h3, .h3 {
   font-size: rem(40);
+  margin-bottom: rem(30);
   @include media-breakpoint-down(lg) {
     font-size: rem(36);
+    margin-bottom: rem(20);
   }
   @include media-breakpoint-down(md) {
     font-size: rem(28);
+    margin-bottom: rem(16);
   }
 }
 
 h4, .h4 {
   font-size: rem(36);
+  margin-bottom: rem(30);
   @include media-breakpoint-down(lg) {
     font-size: rem(28);
+    margin-bottom: rem(20);
   }
   @include media-breakpoint-down(md) {
     font-size: rem(24);
+    margin-bottom: rem(16);
   }
 }
 
 h5, .h5 {
   font-size: rem(28);
+  margin-bottom: rem(30);
   @include media-breakpoint-down(lg) {
     font-size: rem(24);
+    margin-bottom: rem(20);
   }
   @include media-breakpoint-down(md) {
     font-size: rem(22);
+    margin-bottom: rem(16);
   }
 }
 
 h6, .h6 {
   font-size: rem(24);
+  margin-bottom: rem(30);
   @include media-breakpoint-down(lg) {
     font-size: rem(22);
+    margin-bottom: rem(20);
   }
   @include media-breakpoint-down(md) {
     font-size: rem(20);
+    margin-bottom: rem(16);
   }
 }
 
@@ -193,4 +208,13 @@ h6, .h6 {
   position: relative;
   overflow: hidden;
   @include section-padding();
+}
+
+.inline-code {
+  background: var(--bs-black);
+  padding: rem(2) rem(4);
+  border-radius: rem(4);
+  font-size: 90%;
+  font-family: var(--bs-code-font);
+  color: var(--bs-white);
 }

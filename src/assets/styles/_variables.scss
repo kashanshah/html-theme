@@ -807,15 +807,15 @@
 .navbar {
   --bs-navbar-padding-x: 0;
   --bs-navbar-padding-y: 0.5rem;
-  --bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), 1);
-  --bs-navbar-hover-color: rgba(var(--bs-emphasis-color-rgb), 1);
-  --bs-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 1);
-  --bs-navbar-active-color: rgba(var(--bs-emphasis-color-rgb), 1);
+  --bs-navbar-color: currentColor;
+  --bs-navbar-hover-color: currentColor;
+  --bs-navbar-disabled-color: currentColor;
+  --bs-navbar-active-color: currentColor;
   --bs-navbar-brand-padding-y: 0.3125rem;
   --bs-navbar-brand-margin-end: 1rem;
   --bs-navbar-brand-font-size: 1.25rem;
-  --bs-navbar-brand-color: rgba(var(--bs-emphasis-color-rgb), 1);
-  --bs-navbar-brand-hover-color: rgba(var(--bs-emphasis-color-rgb), 1);
+  --bs-navbar-brand-color: currentColor;
+  --bs-navbar-brand-hover-color: currentColor;
   --bs-navbar-nav-link-padding-x: 2rem;
   --bs-navbar-nav-link-padding-y: 0rem;
   --bs-navbar-toggler-padding-y: 0.25rem;
@@ -840,13 +840,13 @@
 
 .navbar-dark,
 .navbar[data-bs-theme=dark] {
-  --bs-navbar-color: rgba(255, 255, 255, 1);
-  --bs-navbar-hover-color: rgba(255, 255, 255, 0.75);
-  --bs-navbar-disabled-color: rgba(255, 255, 255, 0.25);
-  --bs-navbar-active-color: #fff;
-  --bs-navbar-brand-color: #fff;
-  --bs-navbar-brand-hover-color: #fff;
-  --bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.1);
+  --bs-navbar-color: currentColor;
+  --bs-navbar-hover-color: currentColor;
+  --bs-navbar-disabled-color: currentColor;
+  --bs-navbar-active-color: currentColor;
+  --bs-navbar-brand-color: currentColor;
+  --bs-navbar-brand-hover-color: currentColor;
+  --bs-navbar-toggler-border-color: currentColor;
   --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
@@ -1326,7 +1326,7 @@
   --bs-offcanvas-height: 30vh;
   --bs-offcanvas-padding-x: 1rem;
   --bs-offcanvas-padding-y: 1rem;
-  --bs-offcanvas-color: var(--bs-body-color);
+  --bs-offcanvas-color: currentColor;
   --bs-offcanvas-bg: var(--bs-body-bg);
   --bs-offcanvas-border-width: var(--bs-border-width);
   --bs-offcanvas-border-color: var(--bs-border-color-translucent);

@@ -128,3 +128,16 @@ The Lead Content component has following elements:
 - `lead-section-title`: This is the title of the section.
 - `lead-section-paragraph`: This is the content of the section.
 Additionally, you can add call to action button as needed.
+
+## Client Logo Component
+The Client Logo component has following elements:
+- `.lead-section-sub-title`: This is the title of the section.
+- `.lead.mb-5`: Client Logo Paragraph - This is the content of the section.
+- `client-logo-list`: This is the list of client logos.
+You can also edit number of logos to display in the list by changing the `data-slides-per-view` attribute. It takes integer value for each breakpoint as follows:
+- `data-gap="30"`: This is the gap between each logo.
+- `data-slides-per-view"5"`: For extra extra extra large screens (1400px and above).
+- `data-slides-per-view-xl="4"`: For extra large screens (between 992px and 1200px).
+- `data-slides-per-view-lg="3"`: For large screens (between 768px and 992px).
+- `data-slides-per-view-md="2"`: For medium screens (between 576px and 768px).
+- `data-slides-per-view-sm="1"`: For small screens (576px and below).

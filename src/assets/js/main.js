@@ -202,7 +202,7 @@ function clientsSlider() {
     const $this = $(this);
     var swiper = new Swiper($this.get(0), {
       slidesPerView: $this.attr('data-slides-per-view') || 5,
-      spaceBetween: $this.attr('data-space-between') || 30,
+      spaceBetween: $this.attr('data-gap') || 30,
       loop: ($this.attr('data-loop') !== 'false'),
       pagination: {
         el: $this.find(".swiper-pagination").get(0),
@@ -225,8 +225,8 @@ function clientsSlider() {
         992: { // xl
           slidesPerView: $this.attr('data-slides-per-view-xl') || $this.attr('data-slides-per-view') || 4,
         },
-        1200: { // xxl
-          slidesPerView: $this.attr('data-slides-per-view-xxl') || $this.attr('data-slides-per-view') || 5,
+        1200: { // default
+          slidesPerView: $this.attr('data-slides-per-view') || 5,
         }
       }
     });

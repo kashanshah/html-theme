@@ -3,8 +3,8 @@
   overflow: hidden;
   width: 100%;
   min-height: 100vh;
-  @include media-breakpoint-down(lg) {
-    min-height: 70vh;
+  @include media-breakpoint-down(md) {
+    min-height: 0;
   }
 }
 .hero-banner {
@@ -17,7 +17,7 @@
   padding: rem(120) 0;
   width: 100%;
   background: var(--bs-body-bg);
-  @include media-breakpoint-down(lg) {
+  @include media-breakpoint-down(md) {
     min-height: 60vh;
     padding: rem(100) 0 rem(150);
     display: block;
@@ -38,6 +38,12 @@
       right: 0;
       left: auto;
       text-align: right;
+      @include media-breakpoint-down(md) {
+        left: 0;
+        right: 0;
+        top: auto;
+        bottom: 0;
+      }
       img {
         width: 100%;
         height: 100%;
@@ -51,7 +57,7 @@
     z-index: 2;
     height: auto;
     flex: 0 0 100%;
-    @include media-breakpoint-down(lg) {
+    @include media-breakpoint-down(md) {
       display: block;
       text-align: center;
     }
@@ -59,7 +65,7 @@
       font-size: rem(24);
       display: block;
       font-weight: 400;
-      @include media-breakpoint-down(lg) {
+      @include media-breakpoint-down(md) {
         font-size: rem(20);
       }
     }
@@ -67,7 +73,7 @@
       font-size: rem(80);
       margin-bottom: rem(16);
 
-      @include media-breakpoint-down(lg) {
+      @include media-breakpoint-down(md) {
         font-size: rem(40);
       }
       .focused-keyword {
@@ -84,7 +90,7 @@
       font-size: rem(22);
       margin-bottom: rem(30);
       line-height: 1.8;
-      @include media-breakpoint-down(lg) {
+      @include media-breakpoint-down(md) {
         font-size: rem(18);
       }
     }

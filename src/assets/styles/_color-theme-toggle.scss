@@ -30,6 +30,6 @@ button#theme-toggle {
   font-size: 1.5em;
 
   #SVGThemeSwitch {
-    color: var(--bs-body-color);
+    color: currentColor;
   }
 }

@@ -1,6 +1,12 @@
 .clients-slider {
   overflow: hidden;
   position: relative;
+  text-align: inherit;
+  --swiper-theme-color: var(--bs-body-color);
+  --swiper-pagination-color: currentColor;
+  --swiper-pagination-bullet-inactive-color: currentColor;
+  --swiper-pagination-bullet-active-color: currentColor;
+  --swiper-pagination-bullet-size: 10px;
   .swiper-wrapper {
     align-items: center;
     .clients-slide {
@@ -17,6 +23,7 @@
   }
   .swiper-pagination {
     position: relative;
-    margin: rem(30) 0;
+    margin: rem(30) 0 0;
+    text-align: inherit;
   }
 }
