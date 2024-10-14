@@ -62,7 +62,7 @@
       &.col-xs-#{$i} {
         --columns: #{$i};
         --col-width: #{$i * 8.3333333333}%;
-        --sidebar-width: calc( (100vw - var(--bs-breakpoint-sm)) / 2 );
+        --sidebar-width: calc( 100vw - (540px / 2) );
         width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
         max-width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
         min-width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
@@ -106,10 +106,10 @@
       &.col-xl-#{$i} {
         --columns: #{$i};
         --col-width: #{$i * 8.3333333333}%;
-        --sidebar-width: calc((100vw - var(--bs-breakpoint-xxl)) / 2);
-        width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
-        max-width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
-        min-width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
+        --sidebar-width: calc((100vw - 1320px) / 2);
+        width: calc(var(--col-width) + var(--sidebar-width));
+        max-width: calc(var(--col-width) + var(--sidebar-width));
+        min-width: calc(var(--col-width) + var(--sidebar-width));
       }
     }
   }

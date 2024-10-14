@@ -47,29 +47,6 @@
   }
 }
 
-.carousel-button-next,
-.carousel-button-prev {
-  background: none;
-  border: 0;
-  &:before {
-    @extend .icon-tknofc;
-  }
-}
-.carousel-button-next {
-  left: auto;
-  right: 0;
-  &:before {
-    content: "\e902";
-  }
-}
-.carousel-button-prev {
-  right: auto;
-  left: 0;
-  &:before {
-    content: "\e901";
-  }
-}
-
 .swiper-pagination {
   display: none;
   text-align: inherit;

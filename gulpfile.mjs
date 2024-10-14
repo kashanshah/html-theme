@@ -53,7 +53,7 @@ function scripts() {
     './node_modules/@fancyapps/ui/dist/carousel/carousel.umd.js',
     // './node_modules/slick-carousel/slick/slick.js',
     // './node_modules/jquery-inview/jquery.inview.js',
-    // './node_modules/gsap/dist/all.js',
+    './node_modules/gsap/dist/all.js',
     'src/assets/js/**/*.js'
   ])
     .pipe(prettier({ singleQuote: true, semi: true }))
