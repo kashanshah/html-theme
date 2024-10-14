@@ -156,3 +156,7 @@ $grid-breakpoints: (
   -o-transform: $transform;
   transform: $transform;
 }
+
+@mixin flex-no-wrap() {
+  flex-wrap: nowrap;
+}

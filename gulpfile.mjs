@@ -27,6 +27,8 @@ function styles() {
     './node_modules/bootstrap/dist/css/bootstrap.css',
     './node_modules/bootstrap/dist/css/bootstrap.rtl.css',
     './node_modules/swiper/swiper-bundle.css',
+    './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
+    './node_modules/@fancyapps/ui/dist/carousel/carousel.css',
     'src/assets/styles/**/*.scss'
   ])
     .pipe(mapSources.init())
@@ -48,6 +50,7 @@ function scripts() {
     './node_modules/swiper/swiper-bundle.js',
     './node_modules/particles.js/particles.js',
     './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+    './node_modules/@fancyapps/ui/dist/carousel/carousel.umd.js',
     // './node_modules/slick-carousel/slick/slick.js',
     // './node_modules/jquery-inview/jquery.inview.js',
     // './node_modules/gsap/dist/all.js',

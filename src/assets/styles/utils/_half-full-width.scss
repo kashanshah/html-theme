@@ -1,0 +1,116 @@
+@use 'sass:math';
+
+.container-fluid-row-sm {
+  @include media-breakpoint-up(sm) {
+    @include flex-no-wrap();
+  }
+}
+
+.container-fluid-row-md {
+  @include media-breakpoint-up(md) {
+    @include flex-no-wrap();
+  }
+}
+
+.container-fluid-row-lg {
+  @include media-breakpoint-up(lg) {
+    @include flex-no-wrap();
+  }
+}
+
+.container-fluid-row-xl {
+  @include media-breakpoint-up(xl) {
+    @include flex-no-wrap();
+  }
+}
+
+.container-fluid-row-xxl {
+  @include media-breakpoint-up(xxl) {
+    @include flex-no-wrap();
+  }
+}
+
+@mixin column-width($columns, $containerWidth: 1320px) {
+  .container-fluid-column.col-sm-#{$columns} {
+    width: calc(((((100% / 12) * var(--columns)))) + (100vw - #{math.div($containerWidth, 2)}));
+    max-width: calc(calc((100% / 12) * $columns) + (100vw - #{math.div($containerWidth, 2)}));
+  }
+  .container-fluid-column.col-md-#{$columns} {
+    width: calc(calc((100% / 12) * $columns) + (100vw - #{math.div($containerWidth, 2)}));
+    max-width: calc(calc((100% / 12) * $columns) + (100vw - #{math.div($containerWidth, 2)}));
+  }
+  .container-fluid-column.col-lg-#{$columns} {
+    width: calc(calc((100% / 12) * $columns) + (100vw - #{math.div($containerWidth, 2)}));
+    max-width: calc(calc((100% / 12) * $columns) + (100vw - #{math.div($containerWidth, 2)}));
+  }
+  .container-fluid-column.col-xl-#{$columns} {
+    width: calc(calc((100% / 12) * $columns) + (100vw - #{math.div($containerWidth, 2)}));
+    max-width: calc(calc((100% / 12) * $columns) + (100vw - #{math.div($containerWidth, 2)}));
+  }
+  .container-fluid-column.col-xxl-#{$columns} {
+    width: calc(calc((100% / 12) * $columns) + (100vw - #{math.div($containerWidth, 2)}));
+    max-width: calc(calc((100% / 12) * $columns) + (100vw - #{math.div($containerWidth, 2)}));
+  }
+}
+
+.container-fluid-column {
+  position: relative;
+
+
+  @for $i from 1 through 12 {
+    @include media-breakpoint-up(xs) {
+      &.col-xs-#{$i} {
+        --columns: #{$i};
+        --col-width: #{$i * 8.3333333333}%;
+        --sidebar-width: calc( (100vw - var(--bs-breakpoint-sm)) / 2 );
+        width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
+        max-width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
+        min-width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
+      }
+    }
+
+    @include media-breakpoint-up(sm) {
+      &.col-sm-#{$i} {
+        --columns: #{$i};
+        --col-width: #{$i * 8.3333333333}%;
+        --sidebar-width: calc( (100vw - var(--bs-breakpoint-md)) / 2 );
+        width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
+        max-width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
+        min-width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      &.col-md-#{$i} {
+        --columns: #{$i};
+        --col-width: #{$i * 8.3333333333}%;
+        --sidebar-width: calc( (100vw - var(--bs-breakpoint-lg)) / 2 );
+        width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
+        max-width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
+        min-width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      &.col-lg-#{$i} {
+        --columns: #{$i};
+        --col-width: #{$i * 8.3333333333}%;
+        --sidebar-width: calc( (100vw - var(--bs-breakpoint-xl)) / 2 );
+        width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
+        max-width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
+        min-width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+      &.col-xl-#{$i} {
+        --columns: #{$i};
+        --col-width: #{$i * 8.3333333333}%;
+        --sidebar-width: calc((100vw - var(--bs-breakpoint-xxl)) / 2);
+        width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
+        max-width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
+        min-width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
+      }
+    }
+  }
+}

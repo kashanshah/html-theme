@@ -1,6 +1,7 @@
-@import 'mixin';
+@import 'utils/mixin';
+@import 'utils/breakpoints';
+@import 'utils/half-full-width';
 @import 'variables';
-@import 'breakpoints';
 @import 'em-to-px';
 @import 'icomoon';
 @import 'scrollbar';

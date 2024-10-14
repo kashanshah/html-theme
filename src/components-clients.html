@@ -1,136 +1,42 @@
 <!DOCTYPE html>
-<!--[if IE 7 ]>
-<html lang="en-us" class="isie ie7 oldie no-js"> <![endif]-->
-<!--[if IE 8 ]>
-<html lang="en-us" class="isie ie8 oldie no-js"> <![endif]-->
-<!--[if IE 9 ]>
-<html lang="en-us" class="isie ie9 no-js"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->
-<html lang="en-us" class="no-js"> <!--<![endif]-->
-<html lang="en-us" dir="ltr" class="no-js" data-bs-theme="dark">
+<html lang="en">
 <head>
-  <title>Clients Carousel | Teknoffice - Multipurpose Theme</title>
-  @@include('./includes/meta.html')
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Left in Container, Right Full Width</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom style to make the right div full width */
+    .right-full {
+      background-color: #f8f9fa;
+      padding: 20px;
+      width: 100vw;
+      margin-left: auto;
+      position: relative;
+      right: calc((100vw - 100%) / 2); /* Align with the edge of the screen */
+    }
+  </style>
 </head>
-
 <body>
-@@include('./includes/header.html')
 
-<!--Clients Section-->
-<section class="main-section text-center">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h2 class="lead-section-sub-title">Light </h2>
-        <p class="lead mb-5">We have worked with some amazing clients and partners. You can update classes on main container to play around with colors and styles, like <span class="inline-code">text-bg-light</span>, <span class="inline-code">text-bg-dark</span>, <span class="inline-code">text-bg-primary</span>, <span class="inline-code">text-bg-secondary</span>, <span class="inline-code">text-start</span>, <span class="inline-code">text-end</span>, and so on.</p>
-        <div class="clients-slider" data-gap="30" data-slides-per-view="5" data-slides-per-view-xl="4" data-slides-per-view-lg="3" data-slides-per-view-md="2" data-slides-per-view-sm="2">
-          <div class="swiper-wrapper">
-            <div class="clients-slide swiper-slide">
-              <a href="#" target="_blank">
-                <img src="./assets/images/client-logo-1.svg" alt="Client Logo" class="logo-img"/>
-              </a>
-            </div>
-            <div class="clients-slide swiper-slide">
-              <a href="#" target="_blank">
-                <img src="./assets/images/client-logo-2.svg" alt="Client Logo" class="logo-img"/>
-              </a>
-            </div>
-            <div class="clients-slide swiper-slide">
-              <a href="#" target="_blank">
-                <img src="./assets/images/client-logo-3.svg" alt="Client Logo" class="logo-img"/>
-              </a>
-            </div>
-            <div class="clients-slide swiper-slide">
-              <a href="#" target="_blank">
-                <img src="./assets/images/client-logo-4.svg" alt="Client Logo" class="logo-img"/>
-              </a>
-            </div>
-            <div class="clients-slide swiper-slide">
-              <a href="#" target="_blank">
-                <img src="./assets/images/client-logo-5.svg" alt="Client Logo" class="logo-img"/>
-              </a>
-            </div>
-            <div class="clients-slide swiper-slide">
-              <a href="#" target="_blank">
-                <img src="./assets/images/client-logo-2.svg" alt="Client Logo" class="logo-img"/>
-              </a>
-            </div>
-            <div class="clients-slide swiper-slide">
-              <a href="#" target="_blank">
-                <img src="./assets/images/client-logo-3.svg" alt="Client Logo" class="logo-img"/>
-              </a>
-            </div>
-            <div class="clients-slide swiper-slide">
-              <a href="#" target="_blank">
-                <img src="./assets/images/client-logo-4.svg" alt="Client Logo" class="logo-img"/>
-              </a>
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
+<section class="container-fluid">
+  <div class="row g-0 d-flex">
+    <!-- Left Side in Container -->
+    <div class="col-lg-6">
+      <div class="container">
+        <h2>Left Side Content</h2>
+        <p>This content is inside the Bootstrap container.</p>
       </div>
+    </div>
+
+    <!-- Right Side Full Width -->
+    <div class="col-lg-6 right-full">
+      <h2>Right Side Full Width</h2>
+      <p>This content stretches to the end of the screen.</p>
     </div>
   </div>
 </section>
 
-<!--Clients Section-->
-<section class="main-section text-start text-bg-light">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h2 class="lead-section-sub-title">Our Partners</h2>
-        <p class="lead mb-5">We have worked with some amazing clients and partners. You can update classes on main container to play around with colors and styles, like <span class="inline-code">text-bg-light</span>, <span class="inline-code">text-bg-dark</span>, <span class="inline-code">text-bg-primary</span>, <span class="inline-code">text-bg-secondary</span>, <span class="inline-code">text-start</span>, <span class="inline-code">text-end</span>, and so on.</p>
-        <div class="clients-slider" data-gap="30" data-slides-per-view="5" data-slides-per-view-xl="4" data-slides-per-view-lg="3" data-slides-per-view-md="2" data-slides-per-view-sm="2">
-          <div class="swiper-wrapper">
-            <div class="clients-slide swiper-slide">
-              <a href="#" target="_blank">
-                <img src="./assets/images/client-logo-1.svg" alt="Client Logo" class="logo-img"/>
-              </a>
-            </div>
-            <div class="clients-slide swiper-slide">
-              <a href="#" target="_blank">
-                <img src="./assets/images/client-logo-2.svg" alt="Client Logo" class="logo-img"/>
-              </a>
-            </div>
-            <div class="clients-slide swiper-slide">
-              <a href="#" target="_blank">
-                <img src="./assets/images/client-logo-3.svg" alt="Client Logo" class="logo-img"/>
-              </a>
-            </div>
-            <div class="clients-slide swiper-slide">
-              <a href="#" target="_blank">
-                <img src="./assets/images/client-logo-4.svg" alt="Client Logo" class="logo-img"/>
-              </a>
-            </div>
-            <div class="clients-slide swiper-slide">
-              <a href="#" target="_blank">
-                <img src="./assets/images/client-logo-5.svg" alt="Client Logo" class="logo-img"/>
-              </a>
-            </div>
-            <div class="clients-slide swiper-slide">
-              <a href="#" target="_blank">
-                <img src="./assets/images/client-logo-2.svg" alt="Client Logo" class="logo-img"/>
-              </a>
-            </div>
-            <div class="clients-slide swiper-slide">
-              <a href="#" target="_blank">
-                <img src="./assets/images/client-logo-3.svg" alt="Client Logo" class="logo-img"/>
-              </a>
-            </div>
-            <div class="clients-slide swiper-slide">
-              <a href="#" target="_blank">
-                <img src="./assets/images/client-logo-4.svg" alt="Client Logo" class="logo-img"/>
-              </a>
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-@@include('./includes/footer.html')
-@@include('./includes/scripts.html')
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

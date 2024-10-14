@@ -10,7 +10,7 @@
   .swiper-wrapper {
     align-items: center;
     .clients-slide {
-      text-align: center;
+      text-align: inherit;
       .logo-img {
         filter: grayscale(1);
         @include transition();

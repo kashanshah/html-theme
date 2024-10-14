@@ -1,5 +1,5 @@
-# HTML Boilerplate 
-This is a boilerplate for HTML Project.
+# Teknoffice HTML Template
+This repository contains the boilerplate for the HTML project. The project is set up with Gulp, Webpack, and SASS to compile and bundle the assets. The project is set up with a basic structure to start the development. The project is set up with the following features:
 
 ## Getting Started
 Set up the project on your local with these step:
@@ -126,8 +126,8 @@ To use this component, ensure you include the HTML structure on your page. Adjus
 - **Shadow Effect**: The section is designed with a shadow effect achieved through a specific layout and z-index positioning, providing depth and enhancing the visual hierarchy.
 
 - **Text Variations**: The lead section includes two text elements:
-  - **Lead Section Title**: This prominent title uses the `.lead-section-title` class, styled for large font sizes and spacing adjustments based on screen size.
-  - **Lead Section Paragraph**: A descriptive paragraph with the `.lead-section-paragraph` class that highlights the service or product value proposition, also responsive in size.
+  - **Lead Section Title**: This prominent title uses the `.xl-heading` class, styled for large font sizes and spacing adjustments based on screen size.
+  - **Lead Section Paragraph**: A descriptive paragraph with the `.xl-paragraph` class that highlights the service or product value proposition, also responsive in size.
 
 - **Button Element**: The section features a call-to-action button styled with the `.btn` class, encouraging user engagement with the text "Why Choose Us".
 

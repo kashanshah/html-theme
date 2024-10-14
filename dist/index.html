@@ -24,8 +24,10 @@
 
 <link id="bootstrap-css" rel="stylesheet" href="assets/css/bootstrap.css" />
 <link rel="stylesheet" href="assets/css/swiper-bundle.css"/>
+<link rel="stylesheet" href="assets/css/jquery.fancybox.css"/>
+<link rel="stylesheet" href="assets/css/carousel.css"/>
 
-<link id="default-css" rel="stylesheet" href="assets/css/style.css?v=3" />
+<link id="default-css" rel="stylesheet" href="assets/css/style.css?v=5" />
 <!--[if IE]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
@@ -302,8 +304,8 @@
   <div class="container">
     <div class="row">
       <div class="col-md-10">
-        <h2 class="lead-section-title"><span class="text-keyword">EXPERIENCED TEAMS </span><br/>AND A AGILE</h2>
-        <p class="lead-section-paragraph">framework, we prioritise the commercial goals of the client to deliver the highest business value.</p>
+        <h2 class="xl-heading"><span class="text-keyword">EXPERIENCED TEAMS </span><br/>AND A AGILE</h2>
+        <p class="xl-paragraph">framework, we prioritise the commercial goals of the client to deliver the highest business value.</p>
         <a href="#" class="btn btn-outline">Why Choose Us</a>
       </div>
     </div>
@@ -311,13 +313,24 @@
 </section>
 
 <!--Clients Section-->
-<section class="main-section text-start">
+<section class="text-center">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h2 class="lead-section-sub-title">Our Partners</h2>
-        <p class="lead mb-5">We have worked with some amazing clients and partners.</p>
-        <div class="clients-slider" data-loop="true" data-gap="30" data-lazy="true" data-navigation="true" data-pagination="true" data-autoplay="2500" data-slides-per-view="2" data-slides-per-view-sm="3" data-slides-per-view-md="4" data-slides-per-view-lg="5" data-slides-per-view-xl="6" data-slides-per-view-xxl="7">
+        <div
+          class="clients-slider"
+          data-loop="true"
+          data-gap="30"
+          data-lazy="true"
+          data-navigation="false"
+          data-pagination="false"
+          data-grab-cursor="true"
+          data-autoplay="2500"
+          data-slides-per-view="1"
+          data-slides-per-view-sm="2"
+          data-slides-per-view-md="3"
+          data-slides-per-view-lg="4"
+          data-slides-per-view-xl="5">
           <div class="swiper-wrapper">
             <div class="clients-slide swiper-slide">
               <a href="#" target="_blank">
@@ -370,49 +383,47 @@
 </section>
 
 <!-- Gallery Images Section -->
-<section class="main-section">
+<section class="main-section img-gallery">
   <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h2 class="lead-section-sub-title">Our Gallery</h2>
-        <p class="lead mb-5">We have worked with some amazing clients and partners.</p>
-        <div class="gallery-slider">
-          <div class="swiper-wrapper">
-            <div class="gallery-slide swiper-slide">
-              <a href="./assets/images/gallery-1.jpg" class="gallery-image-link" data-lightbox="gallery">
-                <img src="./assets/images/gallery-1.jpg" alt="Gallery Image" class="img-fluid"/>
-              </a>
-            </div>
-            <div class="gallery-slide swiper-slide">
-              <a href="./assets/images/gallery-2.jpg" class="gallery-image-link" data-lightbox="gallery">
-                <img src="./assets/images/gallery-2.jpg" alt="Gallery Image" class="img-fluid"/>
-              </a>
-            </div>
-            <div class="gallery-slide swiper-slide">
-              <a href="./assets/images/gallery-3.jpg" class="gallery-image-link" data-lightbox="gallery">
-                <img src="./assets/images/gallery-3.jpg" alt="Gallery Image" class="img-fluid"/>
-              </a>
-            </div>
-            <div class="gallery-slide swiper-slide">
-              <a href="./assets/images/gallery-1.jpg" class="gallery-image-link" data-lightbox="gallery">
-                <img src="./assets/images/gallery-1.jpg" alt="Gallery Image" class="img-fluid"/>
-              </a>
-            </div>
-            <div class="gallery-slide swiper-slide">
-              <a href="./assets/images/gallery-2.jpg" class="gallery-image-link" data-lightbox="gallery">
-                <img src="./assets/images/gallery-2.jpg" alt="Gallery Image" class="img-fluid"/>
-              </a>
-            </div>
-            <div class="gallery-slide swiper-slide">
-              <a href="./assets/images/gallery-3.jpg" class="gallery-image-link" data-lightbox="gallery">
-                <img src="./assets/images/gallery-3.jpg" alt="Gallery Image" class="img-fluid"/>
-              </a>
-            </div>
+    <div class="row container-fluid-row-md">
+      <div class="col-md-6 col-lg-5 col-xl-4 position-relative z-1">
+        <h2 class="xl-heading text-keyword">LOOK AROUND</h2>
+        <hr/>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type.</p>
+      </div>
+      <div class="col-md-6 col-lg-7 col-xl-8 container-fluid-column">
+        <div class="f-carousel gallery-slider" data-loop="false">
+          <div class="f-carousel__slide gallery-slide">
+            <a data-fancybox="img-gallery" href="./assets/images/gallery-1.jpg" class="gallery-image-link" data-lightbox="gallery">
+              <img src="./assets/images/gallery-1.jpg" alt="Gallery Image" class="img-fluid"/>
+            </a>
+          </div>
+          <div class="f-carousel__slide gallery-slide">
+            <a data-fancybox="img-gallery" href="./assets/images/gallery-2.jpg" class="gallery-image-link" data-lightbox="gallery">
+              <img src="./assets/images/gallery-2.jpg" alt="Gallery Image" class="img-fluid"/>
+            </a>
+          </div>
+          <div class="f-carousel__slide gallery-slide">
+            <a data-fancybox="img-gallery" href="./assets/images/gallery-3.jpg" class="gallery-image-link" data-lightbox="gallery">
+              <img src="./assets/images/gallery-3.jpg" alt="Gallery Image" class="img-fluid"/>
+            </a>
+          </div>
+          <div class="f-carousel__slide gallery-slide">
+            <a data-fancybox="img-gallery" href="./assets/images/gallery-1.jpg" class="gallery-image-link" data-lightbox="gallery">
+              <img src="./assets/images/gallery-1.jpg" alt="Gallery Image" class="img-fluid"/>
+            </a>
+          </div>
+          <div class="f-carousel__slide gallery-slide">
+            <a data-fancybox="img-gallery" href="./assets/images/gallery-2.jpg" class="gallery-image-link" data-lightbox="gallery">
+              <img src="./assets/images/gallery-2.jpg" alt="Gallery Image" class="img-fluid"/>
+            </a>
+          </div>
+          <div class="f-carousel__slide gallery-slide">
+            <a data-fancybox="img-gallery" href="./assets/images/gallery-3.jpg" class="gallery-image-link" data-lightbox="gallery">
+              <img src="./assets/images/gallery-3.jpg" alt="Gallery Image" class="img-fluid"/>
+            </a>
           </div>
         </div>
-        <div class="swiper-scrollbar"></div>
-        <div class="swiper-button-prev"><i class="icon icon-arrow-left"></i> <span class="visually-hidden"> PREVIOUS</span></div>
-        <div class="swiper-button-next"><i class="icon icon-arrow-right"></i> <span class="visually-hidden">NEXT</span></div>
       </div>
     </div>
   </div>
@@ -421,7 +432,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <p class="text-center">This is a HTML Boilerplate. Using webpack, gulp, scss, bootstrap.</p>
+        <p>&nbsp;</p>
       </div>
     </div>
   </div>
@@ -432,7 +443,9 @@
 <script type="text/javascript" src="./assets/js/bootstrap.bundle.js"></script>
 <script type="text/javascript" src="./assets/js/swiper-bundle.min.js"></script>
 <script type="text/javascript" src="./assets/js/particles.min.js"></script>
-<script type="text/javascript" src="./assets/js/main.js?v=4"></script>
+<script type="text/javascript" src="./assets/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="./assets/js/carousel.umd.js"></script>
+<script type="text/javascript" src="./assets/js/main.js?v=5"></script>
 
 </body>
 </html>

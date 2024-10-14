@@ -3,8 +3,8 @@
   --swiper-pagination-top: auto;
   --swiper-pagination-bottom: 0px;
   &:not([data-pagination="false"]) {
-    --swiper-padding-bottom: 30px;
-    padding-bottom: var(--swiper-padding-bottom, 30px);
+    --swiper-padding-bottom: 2rem;
+    padding-bottom: var(--swiper-padding-bottom, 2rem);
     .swiper-pagination {
       display: block;
     }
@@ -17,6 +17,8 @@
   }
 }
 
+.carousel-button-prev,
+.carousel-button-next,
 .swiper-button-prev,
 .swiper-button-next {
   color: var(--bs-body-color);
@@ -27,14 +29,44 @@
   justify-content: center;
   width: auto;
   margin: auto 0;
+  position: absolute;
   top: 0;
   bottom: var(--swiper-padding-bottom, 0px);
   @include media-breakpoint-up(lg) {
     font-size: rem(22);
   }
+  &[disabled],
+  &[aria-disabled="true"] {
+    color: var(--bs-body-color);
+    opacity: var(--bs-disabled);
+    cursor: not-allowed;
+  }
 
   &:after {
     display: none;
+  }
+}
+
+.carousel-button-next,
+.carousel-button-prev {
+  background: none;
+  border: 0;
+  &:before {
+    @extend .icon-tknofc;
+  }
+}
+.carousel-button-next {
+  left: auto;
+  right: 0;
+  &:before {
+    content: "\e902";
+  }
+}
+.carousel-button-prev {
+  right: auto;
+  left: 0;
+  &:before {
+    content: "\e901";
   }
 }
 

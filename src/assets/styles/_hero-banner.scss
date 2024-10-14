@@ -161,7 +161,7 @@
         position: static;
         font-size: rem(14);
         display: flex;
-        gap: rem(6);
+        gap: rem(12);
         align-items: center;
         justify-content: center;
         width: auto;
@@ -194,7 +194,6 @@
 
   .icon {
     color: inherit;
-    width: rem(27);
   }
 }
 .particles-js {

@@ -185,7 +185,7 @@ function heroSlider() {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
-      grabCursor: $this.attr('data-grab-cursor').toString() === 'true',
+      grabCursor: (boolToStringBool($this.attr('data-grab-cursor')) !== 'false'),
       loop: boolToStringBool($this.attr('data-loop')) === 'true',
       autoplay: boolToStringBool($this.attr('data-autoplay')) === 'true' ? {
         delay: Number($this.attr('data-autoplay')) || 5000,
@@ -216,7 +216,8 @@ function clientsSlider() {
   $('.clients-slider').each(function() {
     const $this = $(this);
     var swiper = new Swiper($this.get(0), {
-      spaceBetween: $this.attr('data-gap') || 30,
+      spaceBetween: $this.attr('data-gap') || 32,
+      grabCursor: (boolToStringBool($this.attr('data-grab-cursor')) !== 'false'),
       lazy: (boolToStringBool($this.attr('data-lazy')) !== 'false'),
       loop: (boolToStringBool($this.attr('data-loop')) !== 'false'),
       navigation: boolToStringBool($this.attr('data-navigation')) !== 'false' ?  {
@@ -268,40 +269,74 @@ function clientsSlider() {
 function gallerySlider() {
   $('.gallery-slider').each(function() {
     const $this = $(this);
+
+    const container = $this.get(0);
+    const options = { 
+      infinite: boolToStringBool($this.attr('data-loop')) !== 'false',
+      center: boolToStringBool($this.attr('data-center')) !== 'false',
+      direction: $('body').attr('dir') || 'ltr',
+      dragFree: $this.attr('data-dragfree'),
+      Navigation: boolToStringBool($this.attr('data-navigation')) !== 'false' ? {
+        classes: {
+          container: "f-carousel__nav",
+          button: "carousel-button-prev-next",
+          isNext: "carousel-button-next",
+          isPrev: "carousel-button-prev",
+        },
+        nextTpl: '<span class="visually-hidden">NEXT</span>',
+        prevTpl: '<span class="visually-hidden"> PREVIOUS</span>',
+      } : false,
+    };
+
+    new Carousel(container, options);
+    return;
+    
     var swiper = new Swiper($this.get(0), {
-      spaceBetween: $this.attr('data-gap') || 30,
+      spaceBetween: $this.attr('data-gap') || 32,
+      grabCursor: (boolToStringBool($this.attr('data-grab-cursor')) !== 'false'),
       lazy: (boolToStringBool($this.attr('data-lazy')) !== 'false'),
       loop: (boolToStringBool($this.attr('data-loop')) !== 'false'),
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
+      navigation: boolToStringBool($this.attr('data-navigation')) !== 'false' ?  {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-      },
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: true,
-      },
-      slidesPerView: $this.attr('data-slides-per-view') || 5,
+      } : false,
+      pagination: boolToStringBool($this.attr('data-pagination')) !== 'false' ? {
+        el: '.swiper-pagination',
+        clickable: true,
+      } : false,
+      autoplay: boolToStringBool($this.attr('data-autoplay')) === 'true' ? {
+        delay: $this.attr('data-autoplay') || 2500,
+        disableOnInteraction: false,
+      } : false,
       breakpoints: {
-        576: { // sm
-          slidesPerView: $this.attr('data-slides-per-view-sm'),
+        0: { // default
+          slidesPerView: $this.attr('data-slides-per-view'),
         },
-        768: { // md
-          slidesPerView: $this.attr('data-slides-per-view-md'),
-        },
-        992: { // lg
-          slidesPerView: $this.attr('data-slides-per-view-lg'),
-        },
-        1200: { // xl
-          slidesPerView: $this.attr('data-slides-per-view-xl'),
-        }
-      },
-      scrollbar: {
-        el: '.swiper-scrollbar',
-        hide: false
+        ...($this.attr('data-slides-per-view-sm') ? {
+          576: { // sm
+            slidesPerView: $this.attr('data-slides-per-view-sm'),
+          }
+        } : {}),
+        ...($this.attr('data-slides-per-view-md') ? {
+          768: { // md
+            slidesPerView: $this.attr('data-slides-per-view-md'),
+          }
+        } : {}),
+        ...($this.attr('data-slides-per-view-lg') ? {
+          992: { // lg
+            slidesPerView: $this.attr('data-slides-per-view-lg'),
+          }
+        } : {}),
+        ...($this.attr('data-slides-per-view-xl') ? {
+          1200: { // xl
+            slidesPerView: $this.attr('data-slides-per-view-xl'),
+          }
+        } : {}),
+        ...($this.attr('data-slides-per-view-xxl') ? {
+          1400: { // xxl
+            slidesPerView: $this.attr('data-slides-per-view-xxl'),
+          }
+        } : {}),
       }
     })
   });

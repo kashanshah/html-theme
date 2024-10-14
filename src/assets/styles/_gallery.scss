@@ -1,3 +1,10 @@
 .gallery-slider {
+  .gallery-slide {
+    max-width: rem(300);
+    display: flex;
+    align-items: flex-end;
+    max-height: 60vh;
+    margin-inline-end: rem(40)
+  }
 
 }
