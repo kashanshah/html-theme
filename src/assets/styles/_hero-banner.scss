@@ -7,7 +7,6 @@
   }
   @include media-breakpoint-up(md) {
     width: 100%;
-    min-height: 100vh;
   }
   &:before {
     z-index: 3;
@@ -24,7 +23,7 @@
   @include media-breakpoint-up(md) {
     padding: rem(120) 0;
     display: flex;
-    min-height: 100vh;
+    min-height: rem(750);
   }
   .hero-banner-img {
     position: absolute;

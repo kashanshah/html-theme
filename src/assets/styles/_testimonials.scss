@@ -1,0 +1,100 @@
+.testimonial-slide {
+  @include media-breakpoint-up(md) {
+    display: flex;
+    align-items: flex-start;
+    gap: rem(80);
+    @include media-breakpoint-up(lg) {
+      gap: rem(200);
+      align-items: center;
+    }
+  }
+  .testimonial-img {
+    position: relative;
+    margin-bottom: rem(80);
+    height: auto;
+    @include media-breakpoint-up(md) {
+      width: 50%;
+      margin-bottom: 0;
+    }
+    .testimonial-office-img {
+      position: relative;
+      z-index: 0;
+    }
+    .testimonial-user-img {
+      position: absolute;
+      z-index: 1;
+      top: 100%;
+      left: 50%;
+      width: rem(100);
+      height: rem(100);
+      transform: translate(-50%, -50%);
+      @include borderRadius(50%);
+      @include media-breakpoint-up(md) {
+        left: 100%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      @include media-breakpoint-up(lg) {
+        width: rem(150);
+        height: rem(150);
+      }
+    }
+  }
+  .testimonial-text {
+    position: relative;
+    @include media-breakpoint-up(md) {
+      width: 50%;
+    }
+    @include media-breakpoint-up(lg) {
+      padding-top: rem(30);
+    }
+    .testimonial-quotes {
+      font-size: rem(60);
+      @include media-breakpoint-up(lg) {
+        position: absolute;
+        top: 0;
+        left: rem(-24);
+        transform: translate(-100%, 0%);
+      }
+    }
+    .testimonial-title {
+      margin-bottom: rem(16);
+    }
+    .testimonial-paragraph {
+      margin-bottom: rem(16);
+    }
+    .testimonial-user-name {
+      font-size: rem(20);
+      margin: rem(24) 0 rem(32);
+    }
+    .testimonial-stars {
+      .icon {
+        background: linear-gradient(90deg, var(--bs-primary) 0%, var(--bs-secondary) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: rem(30);
+      }
+    }
+  }
+}
+
+.testimonial-slider {
+  position: relative;
+  margin-bottom: rem(32);
+  &.swiper-initialized:not([data-pagination=false]) {
+    --swiper-padding-bottom: 0;
+  }
+  .swiper-pagination {
+    position: static;
+    @include media-breakpoint-up(md) {
+      top: calc( 100% + 2rem );
+      position: absolute;
+      right: 0;
+      left: calc( 50% + rem(40) );
+    }
+    @include media-breakpoint-up(lg) {
+      top: 100%;
+      left: calc( 50% + rem(100) );
+    }
+  }
+}

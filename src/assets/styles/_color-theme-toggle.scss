@@ -19,9 +19,6 @@
 
 [data-bs-theme="dark"]:root {
   color-scheme: dark only;
-  img:not([src*=".svg"]) {
-    filter: brightness(0.8) contrast(1.2);
-  }
 }
 
 button#theme-toggle {

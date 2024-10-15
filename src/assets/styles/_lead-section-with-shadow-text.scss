@@ -12,11 +12,11 @@
   font-size: rem(50);
   margin-bottom: rem(16);
   @include media-breakpoint-up(md) {
-    font-size: rem(75);
+    font-size: rem(70);
     margin-bottom: rem(20);
   }
   @include media-breakpoint-up(lg) {
-    font-size: rem(100);
+    font-size: rem(90);
     margin-bottom: rem(30);
   }
 }

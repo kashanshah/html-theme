@@ -55,61 +55,45 @@
 
 .container-fluid-column {
   position: relative;
+  --col-width: 100%;
 
 
   @for $i from 1 through 12 {
-    @include media-breakpoint-up(xs) {
-      &.col-xs-#{$i} {
-        --columns: #{$i};
-        --col-width: #{$i * 8.3333333333}%;
-        --sidebar-width: calc( 100vw - (540px / 2) );
-        width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
-        max-width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
-        min-width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
-      }
+    &.col-#{$i},
+    &.col-xs-#{$i},
+    &.col-sm-#{$i},
+    &.col-md-#{$i},
+    &.col-lg-#{$i},
+    &.col-xl-#{$i},
+    &.col-xxl-#{$i} {
+      --sidebar-width: calc((100vw - var(--container-width)) / 2);
+      width: calc(var(--col-width) + var(--sidebar-width));
+      min-width: calc(var(--col-width) + var(--sidebar-width));
+      max-width: calc(var(--col-width) + var(--sidebar-width));
     }
-
     @include media-breakpoint-up(sm) {
       &.col-sm-#{$i} {
-        --columns: #{$i};
-        --col-width: #{$i * 8.3333333333}%;
-        --sidebar-width: calc( (100vw - var(--bs-breakpoint-md)) / 2 );
-        width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
-        max-width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
-        min-width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
+        --col-width: #{$i * 8.33334}%;
       }
     }
-
     @include media-breakpoint-up(md) {
       &.col-md-#{$i} {
-        --columns: #{$i};
-        --col-width: #{$i * 8.3333333333}%;
-        --sidebar-width: calc( (100vw - var(--bs-breakpoint-lg)) / 2 );
-        width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
-        max-width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
-        min-width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
+        --col-width: #{$i * 8.33334}%;
       }
     }
-
     @include media-breakpoint-up(lg) {
       &.col-lg-#{$i} {
-        --columns: #{$i};
-        --col-width: #{$i * 8.3333333333}%;
-        --sidebar-width: calc( (100vw - var(--bs-breakpoint-xl)) / 2 );
-        width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
-        max-width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
-        min-width: calc(var(--col-width) + var(--sidebar-width) + (var(--bs-gutter-x) * 2));
+        --col-width: #{$i * 8.33334}%;
       }
     }
-
     @include media-breakpoint-up(xl) {
       &.col-xl-#{$i} {
-        --columns: #{$i};
-        --col-width: #{$i * 8.3333333333}%;
-        --sidebar-width: calc((100vw - 1320px) / 2);
-        width: calc(var(--col-width) + var(--sidebar-width));
-        max-width: calc(var(--col-width) + var(--sidebar-width));
-        min-width: calc(var(--col-width) + var(--sidebar-width));
+        --col-width: #{$i * 8.33334}%;
+      }
+    }
+    @include media-breakpoint-up(xxl) {
+      &.col-xxl-#{$i} {
+        --col-width: #{$i * 8.33334}%;
       }
     }
   }
