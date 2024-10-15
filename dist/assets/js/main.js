@@ -13,6 +13,16 @@ $(document).ready(function () {
   newsSlider();
   testimonialSlider();
   fullWidthImgSec();
+  header();
+});
+
+$(window).on('load', function () {
+  AOS.init({
+    duration: 1000,
+    easing: 'ease',
+    once: true,
+  });
+  setTimeout(AOS.refresh, 3000);
 });
 
 function colorTheme() {
@@ -385,5 +395,17 @@ function testimonialSlider() {
         disableOnInteraction: false,
       },
     });
+  });
+}
+
+function header() {
+  $(window).on('scroll', function () {
+    if ($('.main-header').hasClass('fixed-header')) {
+      if ($(this).scrollTop() > 50) {
+        $('.main-header').addClass('sticky');
+      } else {
+        $('.main-header').removeClass('sticky');
+      }
+    }
   });
 }

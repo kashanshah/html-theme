@@ -2677,29 +2677,8 @@ hr {
 }
 
 .swiper-pagination-bullet {
-  --swiper-pagination-color: linear-gradient(90deg, var(--bs-primary) 0%, var(--bs-secondary) 100%);
-  --swiper-pagination-bullet-inactive-color: none;
-  --swiper-pagination-bullet-size: 33px;
-  position: relative;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-.swiper-pagination-bullet:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 8px;
-  height: 8px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -o-border-radius: 50%;
-  -ms-border-radius: 50%;
-  border-radius: 50%;
-  background: var(--bs-body-color);
+  --swiper-pagination-color: var(--bs-body-color);
+  --swiper-pagination-bullet-inactive-color: var(--bs-body-color);
 }
 
 [dir=rtl] .swiper-button-next,
@@ -2730,6 +2709,22 @@ hr {
   color-scheme: dark only;
 }
 
+[data-bs-theme=light] .show-on-light-theme {
+  display: block;
+}
+
+[data-bs-theme=light] .show-on-dark-theme {
+  display: none;
+}
+
+[data-bs-theme=dark] .show-on-light-theme {
+  display: none;
+}
+
+[data-bs-theme=dark] .show-on-dark-theme {
+  display: block;
+}
+
 button#theme-toggle {
   border: 0;
   background: none;
@@ -2741,6 +2736,10 @@ button#theme-toggle #SVGThemeSwitch {
 
 .main-header {
   background: var(--bs-body-bg);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .main-header.fixed-header {
   position: fixed;
@@ -2750,7 +2749,12 @@ button#theme-toggle #SVGThemeSwitch {
   z-index: 100;
 }
 .main-header.header-transparent {
-  background: linear-gradient(rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 15%, rgba(0, 0, 0, 0) 100%);
+  background: transparent;
+}
+.main-header.fixed-header.header-transparent.sticky {
+  background: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 .main-header .navbar {
   font-size: 20px;
@@ -3659,4 +3663,29 @@ button#theme-toggle #SVGThemeSwitch {
     top: 100%;
     left: calc(50% + 6.25rem);
   }
+}
+.testimonial-slider .swiper-pagination-bullet {
+  --swiper-pagination-color: linear-gradient(90deg, var(--bs-primary) 0%, var(--bs-secondary) 100%);
+  --swiper-pagination-bullet-inactive-color: none;
+  --swiper-pagination-bullet-size: 33px;
+  position: relative;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.testimonial-slider .swiper-pagination-bullet:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  background: var(--bs-body-color);
 }

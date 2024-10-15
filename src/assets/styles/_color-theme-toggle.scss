@@ -21,6 +21,20 @@
   color-scheme: dark only;
 }
 
+[data-bs-theme="light"] .show-on-light-theme {
+  display: block;
+}
+[data-bs-theme="light"] .show-on-dark-theme {
+  display: none;
+}
+
+[data-bs-theme="dark"] .show-on-light-theme {
+  display: none;
+}
+[data-bs-theme="dark"] .show-on-dark-theme {
+  display: block;
+}
+
 button#theme-toggle {
   border: 0;
   background: none;

@@ -29,6 +29,7 @@ function styles() {
     './node_modules/swiper/swiper-bundle.css',
     './node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
     './node_modules/@fancyapps/ui/dist/carousel/carousel.css',
+    './node_modules/aos/dist/aos.css',
     'src/assets/styles/**/*.scss'
   ])
     .pipe(mapSources.init())
@@ -54,6 +55,7 @@ function scripts() {
     // './node_modules/slick-carousel/slick/slick.js',
     // './node_modules/jquery-inview/jquery.inview.js',
     './node_modules/gsap/dist/all.js',
+    './node_modules/aos/dist/aos.js',
     'src/assets/js/**/*.js'
   ])
     .pipe(prettier({ singleQuote: true, semi: true }))

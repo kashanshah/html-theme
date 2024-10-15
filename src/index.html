@@ -22,7 +22,7 @@
   <div class="swiper-wrapper hero-slides-wrapper">
     <!-- Slides -->
     <div class="swiper-slide hero-banner has-overlay">
-      <div class="hero-banner-content">
+      <div class="hero-banner-content" data-aos="zoom-out-right">
         <div class="container">
           <div class="row">
             <div class="col-lg-7">
@@ -34,7 +34,7 @@
           </div>
         </div>
       </div>
-      <div class="hero-banner-img img-on-right">
+      <div class="hero-banner-img img-on-right" data-aos="zoom-out-left">
         <img src="./assets/images/home-banner-main.png" alt="Home Banner" class="img-fluid"/>
       </div>
     </div>
@@ -46,9 +46,10 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-6">
-              <h1><span class="h2">2. App Xeon Creative </span>Mobile App <br/>Development</h1>
-              <p class="lead">Experienced teams and a agile framework, we prioritise the commercial goals of the client to deliver the highest business value.</p>
-              <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+              <small data-aos="fade-right">APPS NOW CREATIVE </small>
+              <h1 class="text-keyword" data-aos="fade-right">MOBILE APP <span class="focused-keyword">DEVELOPMENT</span></h1>
+              <p class="lead" data-aos="fade-right">Experienced teams and a agile framework, we prioritise the commercial goals of the client to deliver the highest business value.</p>
+              <a href="#" class="btn btn-primary btn-lg" data-aos="fade-right">Get Started</a>
             </div>
           </div>
         </div>
@@ -71,10 +72,9 @@
       </div>
     </div>
   </div>
-  <!-- If we need pagination -->
 
   <!-- If we need navigation buttons -->
-  <div class="hero-slider-navigation">
+  <div class="hero-slider-navigation" data-aos="zoom-out-up">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -109,7 +109,10 @@
           data-slides-per-view-sm="2"
           data-slides-per-view-md="3"
           data-slides-per-view-lg="4"
-          data-slides-per-view-xl="5">
+          data-slides-per-view-xl="5"
+          data-aos="flip-up"
+          data-aos-duration="1500"
+        >
           <div class="swiper-wrapper">
             <div class="clients-slide swiper-slide">
               <a href="#" target="_blank">
@@ -152,9 +155,6 @@
               </a>
             </div>
           </div>
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-prev"><i class="icon icon-arrow-left"></i> <span class="visually-hidden">PREVIOUS</span></div>
-          <div class="swiper-button-next"><i class="icon icon-arrow-right"></i> <span class="visually-hidden">NEXT</span></div>
         </div>
       </div>
     </div>
@@ -167,9 +167,9 @@
   <div class="container">
     <div class="row">
       <div class="col-md-10">
-        <h2 class="xl-heading"><span class="text-keyword d-block">EXPERIENCED </span>TEAMS AND A AGILE</h2>
-        <p class="xl-paragraph">framework, we prioritise the commercial goals of the client to deliver the highest business value.</p>
-        <a href="#" class="btn btn-outline">Why Choose Us</a>
+        <h2 class="xl-heading" data-aos="fade-up"><span class="text-keyword d-block">EXPERIENCED </span>TEAMS AND A AGILE</h2>
+        <p class="xl-paragraph" data-aos="fade-up">framework, we prioritise the commercial goals of the client to deliver the highest business value.</p>
+        <a href="#" class="btn btn-outline" data-aos="zoom-out-up">Why Choose Us</a>
       </div>
     </div>
   </div>
@@ -180,12 +180,12 @@
   <div class="container">
     <div class="row container-fluid-row-md">
       <div class="col-md-6 col-lg-5 col-xl-4 position-relative z-1">
-        <h2 class="xl-heading"><span class="text-keyword d-block">LOOK</span> AROUND</h2>
-        <hr/>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type.</p>
+        <h2 class="xl-heading" data-aos="fade-up"><span class="text-keyword d-block">LOOK</span> AROUND</h2>
+        <hr data-aos="flip-left"/>
+        <p data-aos="fade-up">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type.</p>
       </div>
-      <div class="col-md-6 col-lg-7 col-xl-8 container-fluid-column">
-        <div class="f-carousel gallery-slider" data-loop="false">
+      <div class="col-md-6 col-lg-7 col-xl-8 container-fluid-column overflow-hidden">
+        <div class="f-carousel gallery-slider" data-loop="false" data-aos="fade-right">
           <div class="f-carousel__slide gallery-slide">
             <a data-fancybox="img-gallery" href="./assets/images/gallery-1.jpg" class="gallery-image-link" data-lightbox="gallery">
               <img src="./assets/images/gallery-1.jpg" alt="Gallery Image" class="img-fluid"/>
@@ -222,37 +222,37 @@
   </div>
 </section>
 
-<section class="features-sec main-section  bg-dot-pattern position-right-2">
+<section class="features-sec main-section bg-dot-pattern position-right-2">
   <div class="container">
     <div class="row">
-      <div class="col-12">
-        <h2 class="xl-heading"><span class="text-keyword d-block">WE PROVIDE CLIENTS</span> AWARD-WINNING SERVICES</h2>
+      <div class="col-md-12">
+        <h2 class="xl-heading" data-aos="fade-up"><span class="text-keyword d-block">WE PROVIDE CLIENTS</span> AWARD-WINNING SERVICES</h2>
       </div>
     </div>
     <div class="row mb-5">
       <div class="col-md-3">
-        <div class="feature-box">
+        <div class="feature-box" data-aos="flip-left">
           <img src="./assets/svgs/nft.svg" alt="NFT" class="icon-img" />
           <h3 class="h6 fw-400">NFT Development</h3>
           <p>Non Fungible Tokens are in Trend. We've been building them since 2016</p>
         </div>
       </div>
       <div class="col-md-3">
-        <div class="feature-box">
+        <div class="feature-box" data-aos="flip-right">
           <img src="./assets/svgs/mobile-apps.svg" alt="NFT" class="icon-img" />
           <h3 class="h6 fw-400">Mobile App Development</h3>
           <p>Non Fungible Tokens are in Trend. We've been building them since 2016</p>
         </div>
       </div>
       <div class="col-md-3">
-        <div class="feature-box">
+        <div class="feature-box" data-aos="flip-left">
           <img src="./assets/svgs/desktop.svg" alt="NFT" class="icon-img" />
           <h3 class="h6 fw-400">Web App Development</h3>
           <p>Non Fungible Tokens are in Trend. We've been building them since 2016</p>
         </div>
       </div>
       <div class="col-md-3">
-        <div class="feature-box">
+        <div class="feature-box" data-aos="flip-right">
           <img src="./assets/svgs/software.svg" alt="NFT" class="icon-img" />
           <h3 class="h6 fw-400">Software Development</h3>
           <p>Non Fungible Tokens are in Trend. We've been building them since 2016</p>
@@ -272,7 +272,7 @@
     <div class="row">
       <div class="col-12">
         <h2 class="floating-heading"><span class="text-keyword">OUR TEAM</span> EXPLANS</h2>
-        <img src="./assets/images/team.png" alt="Our Team" class="img-fluid main-img" />
+        <img src="./assets/images/team.png" data-aos="slide-up" alt="Our Team" class="img-fluid main-img" />
       </div>
     </div>
   </div>
@@ -282,12 +282,12 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h2 class="xl-heading"><span class="text-keyword d-block">LATEST</span> NEWS &amp; ARTICLES</h2>
+        <h2 class="xl-heading" data-aos="fade-up"><span class="text-keyword d-block">LATEST</span> NEWS &amp; ARTICLES</h2>
       </div>
     </div>
     <div class="row container-fluid-row-sm">
       <div class="col-md-12 container-fluid-column overflow-hidden">
-        <div class="news-slider">
+        <div class="news-slider" data-aos="fade-up">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="news-card">
@@ -393,9 +393,9 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h2 class="xl-heading"><span class="text-keyword d-block">RECENT</span>TESTIMONIAL</h2>
+        <h2 class="xl-heading" data-aos="fade-right"><span class="text-keyword d-block">RECENT</span>TESTIMONIAL</h2>
       </div>
-      <div class="testimonial-slider" data-slides-per-view="1">
+      <div class="testimonial-slider" data-slides-per-view="1" data-aos="fade-up">
         <div class="swiper-wrapper">
           <div class="testimonial-slide swiper-slide">
             <div class="testimonial-img">
