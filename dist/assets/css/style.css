@@ -3544,6 +3544,9 @@ button#theme-toggle #SVGThemeSwitch {
   margin-top: 2rem;
 }
 
+.testimonial-slide {
+  background: var(--bs-body-bg);
+}
 @media (min-width: 768px) {
   .testimonial-slide {
     display: flex;

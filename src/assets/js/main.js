@@ -350,8 +350,7 @@ function testimonialSlider() {
     var swiper = new Swiper($this.get(0), {
       grabCursor: (boolToStringBool($this.attr('data-grab-cursor')) !== 'false'),
       lazy: true,
-      loop: false,
-      reversed: true,
+      loop: true,
       effect: 'fade',
       navigation: boolToStringBool($this.attr('data-navigation')) !== 'false' ?  {
         nextEl: '.swiper-button-next',
