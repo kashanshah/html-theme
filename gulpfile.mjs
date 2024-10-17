@@ -23,7 +23,7 @@ function clean() {
 
 // Compile SCSS/SASS files, minify and generate sourcemaps
 function styles() {
-  return gulp.src([
+  const cssFiles = [
     './node_modules/bootstrap/dist/css/bootstrap.css',
     './node_modules/bootstrap/dist/css/bootstrap.rtl.css',
     './node_modules/swiper/swiper-bundle.css',
@@ -31,7 +31,18 @@ function styles() {
     './node_modules/@fancyapps/ui/dist/carousel/carousel.css',
     './node_modules/aos/dist/aos.css',
     'src/assets/styles/**/*.scss'
-  ])
+  ];
+  gulp.src(cssFiles)
+    .pipe(mapSources.init())
+    .pipe(sass({
+      errLogToConsole: true, // outputStyle: 'compressed',
+      // outputStyle: 'nested',
+    }).on('error', sass.logError))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(concat('styles.css'))
+    .pipe(mapSources.write('./'))
+    .pipe(dest('dist/assets/css/'));
+  return gulp.src(cssFiles)
     .pipe(mapSources.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('dist/assets/css'))
@@ -45,7 +56,7 @@ function styles() {
 
 // Prettify, minify JavaScript files and generate sourcemaps
 function scripts() {
-  return src([
+  const jsFiles = [
     './node_modules/jquery/dist/jquery.js',
     './node_modules/bootstrap/dist/js/bootstrap.bundle.js',
     './node_modules/swiper/swiper-bundle.js',
@@ -57,7 +68,13 @@ function scripts() {
     './node_modules/gsap/dist/all.js',
     './node_modules/aos/dist/aos.js',
     'src/assets/js/**/*.js'
-  ])
+  ];
+  src(jsFiles)
+      .pipe(uglify())
+      .pipe(concat('scripts.min.js'))
+      .pipe(dest('dist/assets/js'));
+
+  return src(jsFiles)
     .pipe(prettier({ singleQuote: true, semi: true }))
     .pipe(dest('dist/assets/js'))
     .pipe(mapSources.init())

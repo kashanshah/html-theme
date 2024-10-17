@@ -1,0 +1,38 @@
+.newsletter-subscription {
+  margin-bottom: rem(48);
+  @include media-breakpoint-up(md) {
+    margin-bottom: rem(60);
+  }
+  .input-group {
+    --form-input-bg: var(--bs-white);
+    --form-input-color: var(--bs-black);
+    --form-padding: 2rem;
+    --bs-border-radius: 12px;
+    .form-floating {
+      > .form-control-plaintext,
+      .form-control {
+        background: var(--form-input-bg);
+        color: var(--form-input-color);
+        border-inline-end-color: var(--form-input-bg);
+        min-height: rem(75);
+        padding-inline-start: var(--form-padding);
+      }
+
+      label {
+        background: transparent;
+        color: var(--form-input-color);
+        display: flex;
+        align-items: center;
+        padding-inline-start: var(--form-padding);
+        &:after {
+          background: transparent;
+        }
+      }
+    }
+    .input-group-text {
+      font-size: rem(40);
+      background: var(--form-input-bg);
+      color: var(--form-input-color);
+    }
+  }
+}
