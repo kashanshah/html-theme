@@ -71,7 +71,7 @@ function scripts() {
   ];
   src(jsFiles)
       .pipe(uglify())
-      .pipe(concat('scripts.min.js'))
+      .pipe(concat('scripts.js'))
       .pipe(dest('dist/assets/js'));
 
   return src(jsFiles)
