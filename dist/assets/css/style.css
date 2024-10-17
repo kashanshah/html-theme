@@ -3835,12 +3835,25 @@ button#theme-toggle #SVGThemeSwitch {
   min-height: 4.6875rem;
   padding-inline-start: var(--form-padding);
 }
+.newsletter-subscription .input-group .form-floating > .form-control-plaintext:focus ~ label, .newsletter-subscription .input-group .form-floating > .form-control-plaintext:not(:placeholder-shown) ~ label,
+.newsletter-subscription .input-group .form-floating .form-control:focus ~ label,
+.newsletter-subscription .input-group .form-floating .form-control:not(:placeholder-shown) ~ label {
+  padding-left: var(--form-padding);
+  padding-inline-start: var(--form-padding);
+}
 .newsletter-subscription .input-group .form-floating label {
   background: transparent;
   color: var(--form-input-color);
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  left: 0;
+  right: auto;
+  padding-left: var(--form-padding);
   padding-inline-start: var(--form-padding);
+  text-align: left;
+  margin: 0;
+  transform-origin: 0 0;
 }
 .newsletter-subscription .input-group .form-floating label:after {
   background: transparent;
