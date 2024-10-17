@@ -110,14 +110,11 @@
             font-size: rem(16);
           }
 
-          &:hover {
-            text-decoration: underline;
-          }
-
           .icon {
-            background: linear-gradient(90deg, var(--bs-primary) 0%, var(--bs-secondary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            //background: linear-gradient(90deg, var(--bs-primary) 0%, var(--bs-secondary) 100%);
+            //-webkit-background-clip: text;
+            //-webkit-text-fill-color: transparent;
+            color: var(--bs-body-color);
             vertical-align: middle;
             font-size: rem(24);
             @include media-breakpoint-up(md) {

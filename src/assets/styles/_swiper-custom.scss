@@ -3,7 +3,8 @@
   --swiper-pagination-top: auto;
   --swiper-pagination-bottom: 0px;
   --swiper-scrollbar-bg-color: rgba(var(--bs-body-color-rgb), .25);
-  --swiper-scrollbar-drag-bg-color: linear-gradient(90deg, var(--bs-primary) 0%, var(--bs-secondary) 100%);
+  //--swiper-scrollbar-drag-bg-color: linear-gradient(90deg, var(--bs-primary) 0%, var(--bs-secondary) 100%);
+  --swiper-scrollbar-drag-bg-color: var(--bs-body-color);
   &:not([data-pagination="false"]) {
     --swiper-padding-bottom: 2rem;
     padding-bottom: var(--swiper-padding-bottom, 2rem);

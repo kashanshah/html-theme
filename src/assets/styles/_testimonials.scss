@@ -70,7 +70,7 @@
     }
     .testimonial-stars {
       .icon {
-        background: linear-gradient(90deg, var(--bs-primary) 0%, var(--bs-secondary) 100%);
+        background: var(--bs-body-color);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-size: rem(30);
@@ -99,10 +99,11 @@
     }
   }
   .swiper-pagination-bullet {
-    --swiper-pagination-color: linear-gradient(90deg, var(--bs-primary) 0%, var(--bs-secondary) 100%);
-    --swiper-pagination-bullet-inactive-color: none;
-    --swiper-pagination-bullet-size: 33px;
+    //--swiper-pagination-color: linear-gradient(90deg, var(--bs-primary) 0%, var(--bs-secondary) 100%);
+    //--swiper-pagination-bullet-inactive-color: none;
+    --swiper-pagination-bullet-size: 10px;
     position: relative;
+    border: 0;
     @include transition();
     &:before {
       content: '';
@@ -110,8 +111,8 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 8px;
-      height: 8px;
+      width: 10px;
+      height: 10px;
       @include borderRadius(50%);
       background: var(--bs-body-color);
     }
